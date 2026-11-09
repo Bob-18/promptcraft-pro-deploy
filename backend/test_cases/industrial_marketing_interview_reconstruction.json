@@ -1,0 +1,18 @@
+{
+  "case_id": "IM-DEEP-001",
+  "profile_type": "匿名真实访谈画像 + 系统复现测评",
+  "data_status": "岗位经历与工作流程来自匿名访谈；学历未提供；60分为系统复现用入门测评值，不代表受访者真实考试成绩",
+  "role_id": "industrial_marketing",
+  "specific_position": "网络营销专员",
+  "experience_years": 1,
+  "ai_skill_level": "中级",
+  "education_background": "未提供",
+  "theory_test_score": 60,
+  "task": "我需要把工业级和卫生级阀门管件的产品实拍剪成10至30秒短视频，发布到抖音、快手、视频号等平台，主要面向企业老板和采购人员，希望带来私信咨询和采购线索。",
+  "task_status": "根据匿名访谈归纳的真实工作任务，不是受访者逐字原话",
+  "reference_ai_output": "阀门管件找老张，证件齐全够硬气，半夜三点也能立马上门！",
+  "reference_ai_output_status": "受访者提供的既有AI生成文案，仅用于结果审核与改写训练，不是工作项目或原始任务",
+  "expected_training_level": "专项提升",
+  "required_knowledge_points": ["目标客户", "公开资料", "短视频", "待核验", "询盘"],
+  "forbidden_claims": ["保证成交", "全网第一", "全部通过认证", "100%", "零风险"]
+}

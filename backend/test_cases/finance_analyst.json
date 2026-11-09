@@ -1,0 +1,9 @@
+{
+  "role_id": "finance_analyst",
+  "specific_position": "财报分析助理",
+  "experience_years": 1,
+  "ai_skill_level": "初级",
+  "education_background": "本科",
+  "theory_test_score": 58,
+  "task": "基于我提供的财报资料，从收入结构、利润质量、现金流、负债水平和风险因素五个维度生成研究摘要。"
+}

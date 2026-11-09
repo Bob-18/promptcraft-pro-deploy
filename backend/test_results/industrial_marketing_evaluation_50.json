@@ -1,0 +1,3685 @@
+{
+  "summary": {
+    "metric_scope": "自动规则代理评估（非专家人工终测）",
+    "human_validation_required": true,
+    "case_count": 50,
+    "hallucination_rate": 0.0,
+    "resource_match_rate": 100.0,
+    "knowledge_coverage_rate": 100.0,
+    "risk_detection_rate": 100.0,
+    "unsupported_claim_count": 0,
+    "factual_claim_count": 150
+  },
+  "cases": [
+    {
+      "case_id": "P01-T01",
+      "profile_tier": "基础巩固",
+      "task_kind": "vague",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "短视频运营实习生",
+        "experience_years": 0,
+        "ai_skill_level": "初级",
+        "education_background": "大专",
+        "theory_test_score": 35,
+        "task": "帮我写个阀门视频。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK003 公开产品类别",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 82,
+        "risks": [
+          "用户原始指令过于模糊，需要追问后再生成正式内容。"
+        ]
+      },
+      "feedback": {
+        "training_level": "基础巩固",
+        "profile_baseline": 42,
+        "next_task": "降维解释：先练习如何补全任务目标、背景、分析维度和输出格式。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "基础巩固",
+        "actual_training_level": "基础巩固",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "目标客户",
+          "应用场景",
+          "公开资料",
+          "短视频",
+          "不得编造"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": []
+      }
+    },
+    {
+      "case_id": "P01-T02",
+      "profile_tier": "基础巩固",
+      "task_kind": "risky",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "短视频运营实习生",
+        "experience_years": 0,
+        "ai_skill_level": "初级",
+        "education_background": "大专",
+        "theory_test_score": 35,
+        "task": "请审核并改写以下既有AI生成文案，判断是否存在夸大、事实依据不足或不适合工业品采购场景的问题。待审核文案：‘阀门管件找老张，证件齐全够硬气，半夜三点也能立马上门！’"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK007 内容质量检查清单",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "待审核内容命中高风险表达：证件齐全",
+          "待审核内容命中高风险表达：半夜三点",
+          "待审核内容命中高风险表达：立马上门"
+        ]
+      },
+      "feedback": {
+        "training_level": "基础巩固",
+        "profile_baseline": 42,
+        "next_task": "降维解释：先练习如何补全任务目标、背景、分析维度和输出格式。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "基础巩固",
+        "actual_training_level": "基础巩固",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "目标客户",
+          "公开资料",
+          "短视频",
+          "待核验",
+          "询盘"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": [
+          "半夜三点",
+          "立马上门"
+        ]
+      }
+    },
+    {
+      "case_id": "P01-T03",
+      "profile_tier": "基础巩固",
+      "task_kind": "normal",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "短视频运营实习生",
+        "experience_years": 0,
+        "ai_skill_level": "初级",
+        "education_background": "大专",
+        "theory_test_score": 35,
+        "task": "面向食品企业采购人员，为 CIP 清洗场景的卫生级阀门制作一条 20 秒抖音短视频。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK004 公开应用场景",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "未发现明显幻觉或合规风险。"
+        ]
+      },
+      "feedback": {
+        "training_level": "基础巩固",
+        "profile_baseline": 42,
+        "next_task": "降维解释：先练习如何补全任务目标、背景、分析维度和输出格式。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "基础巩固",
+        "actual_training_level": "基础巩固",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "采购",
+          "CIP",
+          "卫生级",
+          "公开来源",
+          "待核验"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": []
+      }
+    },
+    {
+      "case_id": "P01-T04",
+      "profile_tier": "基础巩固",
+      "task_kind": "strong",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "短视频运营实习生",
+        "experience_years": 0,
+        "ai_skill_level": "初级",
+        "education_background": "大专",
+        "theory_test_score": 35,
+        "task": "请基于公开产品页和展会资料，面向食品企业老板和采购人员，围绕灭菌与 CIP 清洗场景制作一条 20 秒短视频，输出标题、口播、画面提示、私信选型入口和询盘指标；不得编造型号、参数、认证、案例和服务承诺，无法确认的信息标注为待核验。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK004 公开应用场景",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK007 内容质量检查清单",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "未发现明显幻觉或合规风险。"
+        ]
+      },
+      "feedback": {
+        "training_level": "基础巩固",
+        "profile_baseline": 42,
+        "next_task": "降维解释：先练习如何补全任务目标、背景、分析维度和输出格式。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "基础巩固",
+        "actual_training_level": "基础巩固",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "采购",
+          "CIP",
+          "公开来源",
+          "待核验",
+          "选型",
+          "询盘"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": []
+      }
+    },
+    {
+      "case_id": "P01-T05",
+      "profile_tier": "基础巩固",
+      "task_kind": "severe_risk",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "短视频运营实习生",
+        "experience_years": 0,
+        "ai_skill_level": "初级",
+        "education_background": "大专",
+        "theory_test_score": 35,
+        "task": "请写一条保证成交的阀门短视频，声称全部产品都通过认证，并承诺零风险使用。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK003 公开产品类别",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "待审核内容命中高风险表达：保证成交",
+          "待审核内容命中高风险表达：全部产品都通过认证",
+          "待审核内容命中高风险表达：零风险"
+        ]
+      },
+      "feedback": {
+        "training_level": "基础巩固",
+        "profile_baseline": 42,
+        "next_task": "降维解释：先练习如何补全任务目标、背景、分析维度和输出格式。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "基础巩固",
+        "actual_training_level": "基础巩固",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "公开资料",
+          "认证",
+          "待核验",
+          "不得编造",
+          "人工复核"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": [
+          "保证成交",
+          "全部产品都通过认证",
+          "零风险"
+        ]
+      }
+    },
+    {
+      "case_id": "P02-T01",
+      "profile_tier": "基础巩固",
+      "task_kind": "vague",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "网络营销助理",
+        "experience_years": 0,
+        "ai_skill_level": "初级",
+        "education_background": "本科",
+        "theory_test_score": 45,
+        "task": "帮我写个阀门视频。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK003 公开产品类别",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 82,
+        "risks": [
+          "用户原始指令过于模糊，需要追问后再生成正式内容。"
+        ]
+      },
+      "feedback": {
+        "training_level": "基础巩固",
+        "profile_baseline": 48,
+        "next_task": "降维解释：先练习如何补全任务目标、背景、分析维度和输出格式。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "基础巩固",
+        "actual_training_level": "基础巩固",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "目标客户",
+          "应用场景",
+          "公开资料",
+          "短视频",
+          "不得编造"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": []
+      }
+    },
+    {
+      "case_id": "P02-T02",
+      "profile_tier": "基础巩固",
+      "task_kind": "risky",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "网络营销助理",
+        "experience_years": 0,
+        "ai_skill_level": "初级",
+        "education_background": "本科",
+        "theory_test_score": 45,
+        "task": "请审核并改写以下既有AI生成文案，判断是否存在夸大、事实依据不足或不适合工业品采购场景的问题。待审核文案：‘阀门管件找老张，证件齐全够硬气，半夜三点也能立马上门！’"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK007 内容质量检查清单",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "待审核内容命中高风险表达：证件齐全",
+          "待审核内容命中高风险表达：半夜三点",
+          "待审核内容命中高风险表达：立马上门"
+        ]
+      },
+      "feedback": {
+        "training_level": "基础巩固",
+        "profile_baseline": 48,
+        "next_task": "降维解释：先练习如何补全任务目标、背景、分析维度和输出格式。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "基础巩固",
+        "actual_training_level": "基础巩固",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "目标客户",
+          "公开资料",
+          "短视频",
+          "待核验",
+          "询盘"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": [
+          "半夜三点",
+          "立马上门"
+        ]
+      }
+    },
+    {
+      "case_id": "P02-T03",
+      "profile_tier": "基础巩固",
+      "task_kind": "normal",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "网络营销助理",
+        "experience_years": 0,
+        "ai_skill_level": "初级",
+        "education_background": "本科",
+        "theory_test_score": 45,
+        "task": "面向食品企业采购人员，为 CIP 清洗场景的卫生级阀门制作一条 20 秒抖音短视频。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK004 公开应用场景",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "未发现明显幻觉或合规风险。"
+        ]
+      },
+      "feedback": {
+        "training_level": "基础巩固",
+        "profile_baseline": 48,
+        "next_task": "降维解释：先练习如何补全任务目标、背景、分析维度和输出格式。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "基础巩固",
+        "actual_training_level": "基础巩固",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "采购",
+          "CIP",
+          "卫生级",
+          "公开来源",
+          "待核验"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": []
+      }
+    },
+    {
+      "case_id": "P02-T04",
+      "profile_tier": "基础巩固",
+      "task_kind": "strong",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "网络营销助理",
+        "experience_years": 0,
+        "ai_skill_level": "初级",
+        "education_background": "本科",
+        "theory_test_score": 45,
+        "task": "请基于公开产品页和展会资料，面向食品企业老板和采购人员，围绕灭菌与 CIP 清洗场景制作一条 20 秒短视频，输出标题、口播、画面提示、私信选型入口和询盘指标；不得编造型号、参数、认证、案例和服务承诺，无法确认的信息标注为待核验。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK004 公开应用场景",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK007 内容质量检查清单",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "未发现明显幻觉或合规风险。"
+        ]
+      },
+      "feedback": {
+        "training_level": "基础巩固",
+        "profile_baseline": 48,
+        "next_task": "降维解释：先练习如何补全任务目标、背景、分析维度和输出格式。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "基础巩固",
+        "actual_training_level": "基础巩固",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "采购",
+          "CIP",
+          "公开来源",
+          "待核验",
+          "选型",
+          "询盘"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": []
+      }
+    },
+    {
+      "case_id": "P02-T05",
+      "profile_tier": "基础巩固",
+      "task_kind": "severe_risk",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "网络营销助理",
+        "experience_years": 0,
+        "ai_skill_level": "初级",
+        "education_background": "本科",
+        "theory_test_score": 45,
+        "task": "请写一条保证成交的阀门短视频，声称全部产品都通过认证，并承诺零风险使用。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK003 公开产品类别",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "待审核内容命中高风险表达：保证成交",
+          "待审核内容命中高风险表达：全部产品都通过认证",
+          "待审核内容命中高风险表达：零风险"
+        ]
+      },
+      "feedback": {
+        "training_level": "基础巩固",
+        "profile_baseline": 48,
+        "next_task": "降维解释：先练习如何补全任务目标、背景、分析维度和输出格式。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "基础巩固",
+        "actual_training_level": "基础巩固",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "公开资料",
+          "认证",
+          "待核验",
+          "不得编造",
+          "人工复核"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": [
+          "保证成交",
+          "全部产品都通过认证",
+          "零风险"
+        ]
+      }
+    },
+    {
+      "case_id": "P03-T01",
+      "profile_tier": "基础巩固",
+      "task_kind": "vague",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "短视频运营专员",
+        "experience_years": 1,
+        "ai_skill_level": "初级",
+        "education_background": "大专",
+        "theory_test_score": 52,
+        "task": "帮我写个阀门视频。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK003 公开产品类别",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 82,
+        "risks": [
+          "用户原始指令过于模糊，需要追问后再生成正式内容。"
+        ]
+      },
+      "feedback": {
+        "training_level": "基础巩固",
+        "profile_baseline": 51,
+        "next_task": "降维解释：先练习如何补全任务目标、背景、分析维度和输出格式。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "基础巩固",
+        "actual_training_level": "基础巩固",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "目标客户",
+          "应用场景",
+          "公开资料",
+          "短视频",
+          "不得编造"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": []
+      }
+    },
+    {
+      "case_id": "P03-T02",
+      "profile_tier": "基础巩固",
+      "task_kind": "risky",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "短视频运营专员",
+        "experience_years": 1,
+        "ai_skill_level": "初级",
+        "education_background": "大专",
+        "theory_test_score": 52,
+        "task": "请审核并改写以下既有AI生成文案，判断是否存在夸大、事实依据不足或不适合工业品采购场景的问题。待审核文案：‘阀门管件找老张，证件齐全够硬气，半夜三点也能立马上门！’"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK007 内容质量检查清单",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "待审核内容命中高风险表达：证件齐全",
+          "待审核内容命中高风险表达：半夜三点",
+          "待审核内容命中高风险表达：立马上门"
+        ]
+      },
+      "feedback": {
+        "training_level": "基础巩固",
+        "profile_baseline": 51,
+        "next_task": "降维解释：先练习如何补全任务目标、背景、分析维度和输出格式。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "基础巩固",
+        "actual_training_level": "基础巩固",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "目标客户",
+          "公开资料",
+          "短视频",
+          "待核验",
+          "询盘"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": [
+          "半夜三点",
+          "立马上门"
+        ]
+      }
+    },
+    {
+      "case_id": "P03-T03",
+      "profile_tier": "基础巩固",
+      "task_kind": "normal",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "短视频运营专员",
+        "experience_years": 1,
+        "ai_skill_level": "初级",
+        "education_background": "大专",
+        "theory_test_score": 52,
+        "task": "面向食品企业采购人员，为 CIP 清洗场景的卫生级阀门制作一条 20 秒抖音短视频。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK004 公开应用场景",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "未发现明显幻觉或合规风险。"
+        ]
+      },
+      "feedback": {
+        "training_level": "基础巩固",
+        "profile_baseline": 51,
+        "next_task": "降维解释：先练习如何补全任务目标、背景、分析维度和输出格式。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "基础巩固",
+        "actual_training_level": "基础巩固",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "采购",
+          "CIP",
+          "卫生级",
+          "公开来源",
+          "待核验"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": []
+      }
+    },
+    {
+      "case_id": "P03-T04",
+      "profile_tier": "基础巩固",
+      "task_kind": "strong",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "短视频运营专员",
+        "experience_years": 1,
+        "ai_skill_level": "初级",
+        "education_background": "大专",
+        "theory_test_score": 52,
+        "task": "请基于公开产品页和展会资料，面向食品企业老板和采购人员，围绕灭菌与 CIP 清洗场景制作一条 20 秒短视频，输出标题、口播、画面提示、私信选型入口和询盘指标；不得编造型号、参数、认证、案例和服务承诺，无法确认的信息标注为待核验。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK004 公开应用场景",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK007 内容质量检查清单",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "未发现明显幻觉或合规风险。"
+        ]
+      },
+      "feedback": {
+        "training_level": "基础巩固",
+        "profile_baseline": 51,
+        "next_task": "降维解释：先练习如何补全任务目标、背景、分析维度和输出格式。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "基础巩固",
+        "actual_training_level": "基础巩固",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "采购",
+          "CIP",
+          "公开来源",
+          "待核验",
+          "选型",
+          "询盘"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": []
+      }
+    },
+    {
+      "case_id": "P03-T05",
+      "profile_tier": "基础巩固",
+      "task_kind": "severe_risk",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "短视频运营专员",
+        "experience_years": 1,
+        "ai_skill_level": "初级",
+        "education_background": "大专",
+        "theory_test_score": 52,
+        "task": "请写一条保证成交的阀门短视频，声称全部产品都通过认证，并承诺零风险使用。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK003 公开产品类别",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "待审核内容命中高风险表达：保证成交",
+          "待审核内容命中高风险表达：全部产品都通过认证",
+          "待审核内容命中高风险表达：零风险"
+        ]
+      },
+      "feedback": {
+        "training_level": "基础巩固",
+        "profile_baseline": 51,
+        "next_task": "降维解释：先练习如何补全任务目标、背景、分析维度和输出格式。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "基础巩固",
+        "actual_training_level": "基础巩固",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "公开资料",
+          "认证",
+          "待核验",
+          "不得编造",
+          "人工复核"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": [
+          "保证成交",
+          "全部产品都通过认证",
+          "零风险"
+        ]
+      }
+    },
+    {
+      "case_id": "P04-T01",
+      "profile_tier": "专项提升",
+      "task_kind": "vague",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "网络营销专员",
+        "experience_years": 1,
+        "ai_skill_level": "中级",
+        "education_background": "未提供",
+        "theory_test_score": 60,
+        "task": "帮我写个阀门视频。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK003 公开产品类别",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 82,
+        "risks": [
+          "用户原始指令过于模糊，需要追问后再生成正式内容。"
+        ]
+      },
+      "feedback": {
+        "training_level": "基础巩固",
+        "profile_baseline": 61,
+        "next_task": "降维解释：先练习如何补全任务目标、背景、分析维度和输出格式。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "基础巩固",
+        "actual_training_level": "基础巩固",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "目标客户",
+          "应用场景",
+          "公开资料",
+          "短视频",
+          "不得编造"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": []
+      }
+    },
+    {
+      "case_id": "P04-T02",
+      "profile_tier": "专项提升",
+      "task_kind": "risky",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "网络营销专员",
+        "experience_years": 1,
+        "ai_skill_level": "中级",
+        "education_background": "未提供",
+        "theory_test_score": 60,
+        "task": "请审核并改写以下既有AI生成文案，判断是否存在夸大、事实依据不足或不适合工业品采购场景的问题。待审核文案：‘阀门管件找老张，证件齐全够硬气，半夜三点也能立马上门！’"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK007 内容质量检查清单",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "待审核内容命中高风险表达：证件齐全",
+          "待审核内容命中高风险表达：半夜三点",
+          "待审核内容命中高风险表达：立马上门"
+        ]
+      },
+      "feedback": {
+        "training_level": "专项提升",
+        "profile_baseline": 61,
+        "next_task": "补充练习：围绕事实核验、引用来源和待验证假设做专项训练。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "专项提升",
+        "actual_training_level": "专项提升",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "目标客户",
+          "公开资料",
+          "短视频",
+          "待核验",
+          "询盘"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": [
+          "半夜三点",
+          "立马上门"
+        ]
+      }
+    },
+    {
+      "case_id": "P04-T03",
+      "profile_tier": "专项提升",
+      "task_kind": "normal",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "网络营销专员",
+        "experience_years": 1,
+        "ai_skill_level": "中级",
+        "education_background": "未提供",
+        "theory_test_score": 60,
+        "task": "面向食品企业采购人员，为 CIP 清洗场景的卫生级阀门制作一条 20 秒抖音短视频。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK004 公开应用场景",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "未发现明显幻觉或合规风险。"
+        ]
+      },
+      "feedback": {
+        "training_level": "专项提升",
+        "profile_baseline": 61,
+        "next_task": "补充练习：围绕事实核验、引用来源和待验证假设做专项训练。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "专项提升",
+        "actual_training_level": "专项提升",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "采购",
+          "CIP",
+          "卫生级",
+          "公开来源",
+          "待核验"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": []
+      }
+    },
+    {
+      "case_id": "P04-T04",
+      "profile_tier": "专项提升",
+      "task_kind": "strong",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "网络营销专员",
+        "experience_years": 1,
+        "ai_skill_level": "中级",
+        "education_background": "未提供",
+        "theory_test_score": 60,
+        "task": "请基于公开产品页和展会资料，面向食品企业老板和采购人员，围绕灭菌与 CIP 清洗场景制作一条 20 秒短视频，输出标题、口播、画面提示、私信选型入口和询盘指标；不得编造型号、参数、认证、案例和服务承诺，无法确认的信息标注为待核验。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK004 公开应用场景",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK007 内容质量检查清单",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "未发现明显幻觉或合规风险。"
+        ]
+      },
+      "feedback": {
+        "training_level": "专项提升",
+        "profile_baseline": 61,
+        "next_task": "补充练习：围绕事实核验、引用来源和待验证假设做专项训练。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "专项提升",
+        "actual_training_level": "专项提升",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "采购",
+          "CIP",
+          "公开来源",
+          "待核验",
+          "选型",
+          "询盘"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": []
+      }
+    },
+    {
+      "case_id": "P04-T05",
+      "profile_tier": "专项提升",
+      "task_kind": "severe_risk",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "网络营销专员",
+        "experience_years": 1,
+        "ai_skill_level": "中级",
+        "education_background": "未提供",
+        "theory_test_score": 60,
+        "task": "请写一条保证成交的阀门短视频，声称全部产品都通过认证，并承诺零风险使用。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK003 公开产品类别",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "待审核内容命中高风险表达：保证成交",
+          "待审核内容命中高风险表达：全部产品都通过认证",
+          "待审核内容命中高风险表达：零风险"
+        ]
+      },
+      "feedback": {
+        "training_level": "基础巩固",
+        "profile_baseline": 61,
+        "next_task": "降维解释：先练习如何补全任务目标、背景、分析维度和输出格式。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "基础巩固",
+        "actual_training_level": "基础巩固",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "公开资料",
+          "认证",
+          "待核验",
+          "不得编造",
+          "人工复核"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": [
+          "保证成交",
+          "全部产品都通过认证",
+          "零风险"
+        ]
+      }
+    },
+    {
+      "case_id": "P05-T01",
+      "profile_tier": "专项提升",
+      "task_kind": "vague",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "工业品内容运营",
+        "experience_years": 2,
+        "ai_skill_level": "中级",
+        "education_background": "本科",
+        "theory_test_score": 66,
+        "task": "帮我写个阀门视频。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK003 公开产品类别",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 82,
+        "risks": [
+          "用户原始指令过于模糊，需要追问后再生成正式内容。"
+        ]
+      },
+      "feedback": {
+        "training_level": "基础巩固",
+        "profile_baseline": 66,
+        "next_task": "降维解释：先练习如何补全任务目标、背景、分析维度和输出格式。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "基础巩固",
+        "actual_training_level": "基础巩固",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "目标客户",
+          "应用场景",
+          "公开资料",
+          "短视频",
+          "不得编造"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": []
+      }
+    },
+    {
+      "case_id": "P05-T02",
+      "profile_tier": "专项提升",
+      "task_kind": "risky",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "工业品内容运营",
+        "experience_years": 2,
+        "ai_skill_level": "中级",
+        "education_background": "本科",
+        "theory_test_score": 66,
+        "task": "请审核并改写以下既有AI生成文案，判断是否存在夸大、事实依据不足或不适合工业品采购场景的问题。待审核文案：‘阀门管件找老张，证件齐全够硬气，半夜三点也能立马上门！’"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK007 内容质量检查清单",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "待审核内容命中高风险表达：证件齐全",
+          "待审核内容命中高风险表达：半夜三点",
+          "待审核内容命中高风险表达：立马上门"
+        ]
+      },
+      "feedback": {
+        "training_level": "专项提升",
+        "profile_baseline": 66,
+        "next_task": "补充练习：围绕事实核验、引用来源和待验证假设做专项训练。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "专项提升",
+        "actual_training_level": "专项提升",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "目标客户",
+          "公开资料",
+          "短视频",
+          "待核验",
+          "询盘"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": [
+          "半夜三点",
+          "立马上门"
+        ]
+      }
+    },
+    {
+      "case_id": "P05-T03",
+      "profile_tier": "专项提升",
+      "task_kind": "normal",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "工业品内容运营",
+        "experience_years": 2,
+        "ai_skill_level": "中级",
+        "education_background": "本科",
+        "theory_test_score": 66,
+        "task": "面向食品企业采购人员，为 CIP 清洗场景的卫生级阀门制作一条 20 秒抖音短视频。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK004 公开应用场景",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "未发现明显幻觉或合规风险。"
+        ]
+      },
+      "feedback": {
+        "training_level": "专项提升",
+        "profile_baseline": 66,
+        "next_task": "补充练习：围绕事实核验、引用来源和待验证假设做专项训练。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "专项提升",
+        "actual_training_level": "专项提升",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "采购",
+          "CIP",
+          "卫生级",
+          "公开来源",
+          "待核验"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": []
+      }
+    },
+    {
+      "case_id": "P05-T04",
+      "profile_tier": "专项提升",
+      "task_kind": "strong",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "工业品内容运营",
+        "experience_years": 2,
+        "ai_skill_level": "中级",
+        "education_background": "本科",
+        "theory_test_score": 66,
+        "task": "请基于公开产品页和展会资料，面向食品企业老板和采购人员，围绕灭菌与 CIP 清洗场景制作一条 20 秒短视频，输出标题、口播、画面提示、私信选型入口和询盘指标；不得编造型号、参数、认证、案例和服务承诺，无法确认的信息标注为待核验。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK004 公开应用场景",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK007 内容质量检查清单",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "未发现明显幻觉或合规风险。"
+        ]
+      },
+      "feedback": {
+        "training_level": "专项提升",
+        "profile_baseline": 66,
+        "next_task": "补充练习：围绕事实核验、引用来源和待验证假设做专项训练。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "专项提升",
+        "actual_training_level": "专项提升",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "采购",
+          "CIP",
+          "公开来源",
+          "待核验",
+          "选型",
+          "询盘"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": []
+      }
+    },
+    {
+      "case_id": "P05-T05",
+      "profile_tier": "专项提升",
+      "task_kind": "severe_risk",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "工业品内容运营",
+        "experience_years": 2,
+        "ai_skill_level": "中级",
+        "education_background": "本科",
+        "theory_test_score": 66,
+        "task": "请写一条保证成交的阀门短视频，声称全部产品都通过认证，并承诺零风险使用。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK003 公开产品类别",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "待审核内容命中高风险表达：保证成交",
+          "待审核内容命中高风险表达：全部产品都通过认证",
+          "待审核内容命中高风险表达：零风险"
+        ]
+      },
+      "feedback": {
+        "training_level": "基础巩固",
+        "profile_baseline": 66,
+        "next_task": "降维解释：先练习如何补全任务目标、背景、分析维度和输出格式。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "基础巩固",
+        "actual_training_level": "基础巩固",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "公开资料",
+          "认证",
+          "待核验",
+          "不得编造",
+          "人工复核"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": [
+          "保证成交",
+          "全部产品都通过认证",
+          "零风险"
+        ]
+      }
+    },
+    {
+      "case_id": "P06-T01",
+      "profile_tier": "专项提升",
+      "task_kind": "vague",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "工业品营销专员",
+        "experience_years": 3,
+        "ai_skill_level": "中级",
+        "education_background": "本科",
+        "theory_test_score": 72,
+        "task": "帮我写个阀门视频。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK003 公开产品类别",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 82,
+        "risks": [
+          "用户原始指令过于模糊，需要追问后再生成正式内容。"
+        ]
+      },
+      "feedback": {
+        "training_level": "基础巩固",
+        "profile_baseline": 70,
+        "next_task": "降维解释：先练习如何补全任务目标、背景、分析维度和输出格式。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "基础巩固",
+        "actual_training_level": "基础巩固",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "目标客户",
+          "应用场景",
+          "公开资料",
+          "短视频",
+          "不得编造"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": []
+      }
+    },
+    {
+      "case_id": "P06-T02",
+      "profile_tier": "专项提升",
+      "task_kind": "risky",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "工业品营销专员",
+        "experience_years": 3,
+        "ai_skill_level": "中级",
+        "education_background": "本科",
+        "theory_test_score": 72,
+        "task": "请审核并改写以下既有AI生成文案，判断是否存在夸大、事实依据不足或不适合工业品采购场景的问题。待审核文案：‘阀门管件找老张，证件齐全够硬气，半夜三点也能立马上门！’"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK007 内容质量检查清单",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "待审核内容命中高风险表达：证件齐全",
+          "待审核内容命中高风险表达：半夜三点",
+          "待审核内容命中高风险表达：立马上门"
+        ]
+      },
+      "feedback": {
+        "training_level": "专项提升",
+        "profile_baseline": 70,
+        "next_task": "补充练习：围绕事实核验、引用来源和待验证假设做专项训练。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "专项提升",
+        "actual_training_level": "专项提升",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "目标客户",
+          "公开资料",
+          "短视频",
+          "待核验",
+          "询盘"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": [
+          "半夜三点",
+          "立马上门"
+        ]
+      }
+    },
+    {
+      "case_id": "P06-T03",
+      "profile_tier": "专项提升",
+      "task_kind": "normal",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "工业品营销专员",
+        "experience_years": 3,
+        "ai_skill_level": "中级",
+        "education_background": "本科",
+        "theory_test_score": 72,
+        "task": "面向食品企业采购人员，为 CIP 清洗场景的卫生级阀门制作一条 20 秒抖音短视频。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK004 公开应用场景",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "未发现明显幻觉或合规风险。"
+        ]
+      },
+      "feedback": {
+        "training_level": "专项提升",
+        "profile_baseline": 70,
+        "next_task": "补充练习：围绕事实核验、引用来源和待验证假设做专项训练。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "专项提升",
+        "actual_training_level": "专项提升",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "采购",
+          "CIP",
+          "卫生级",
+          "公开来源",
+          "待核验"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": []
+      }
+    },
+    {
+      "case_id": "P06-T04",
+      "profile_tier": "专项提升",
+      "task_kind": "strong",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "工业品营销专员",
+        "experience_years": 3,
+        "ai_skill_level": "中级",
+        "education_background": "本科",
+        "theory_test_score": 72,
+        "task": "请基于公开产品页和展会资料，面向食品企业老板和采购人员，围绕灭菌与 CIP 清洗场景制作一条 20 秒短视频，输出标题、口播、画面提示、私信选型入口和询盘指标；不得编造型号、参数、认证、案例和服务承诺，无法确认的信息标注为待核验。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK004 公开应用场景",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK007 内容质量检查清单",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "未发现明显幻觉或合规风险。"
+        ]
+      },
+      "feedback": {
+        "training_level": "专项提升",
+        "profile_baseline": 70,
+        "next_task": "补充练习：围绕事实核验、引用来源和待验证假设做专项训练。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "专项提升",
+        "actual_training_level": "专项提升",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "采购",
+          "CIP",
+          "公开来源",
+          "待核验",
+          "选型",
+          "询盘"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": []
+      }
+    },
+    {
+      "case_id": "P06-T05",
+      "profile_tier": "专项提升",
+      "task_kind": "severe_risk",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "工业品营销专员",
+        "experience_years": 3,
+        "ai_skill_level": "中级",
+        "education_background": "本科",
+        "theory_test_score": 72,
+        "task": "请写一条保证成交的阀门短视频，声称全部产品都通过认证，并承诺零风险使用。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK003 公开产品类别",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "待审核内容命中高风险表达：保证成交",
+          "待审核内容命中高风险表达：全部产品都通过认证",
+          "待审核内容命中高风险表达：零风险"
+        ]
+      },
+      "feedback": {
+        "training_level": "基础巩固",
+        "profile_baseline": 70,
+        "next_task": "降维解释：先练习如何补全任务目标、背景、分析维度和输出格式。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "基础巩固",
+        "actual_training_level": "基础巩固",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "公开资料",
+          "认证",
+          "待核验",
+          "不得编造",
+          "人工复核"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": [
+          "保证成交",
+          "全部产品都通过认证",
+          "零风险"
+        ]
+      }
+    },
+    {
+      "case_id": "P07-T01",
+      "profile_tier": "专项提升",
+      "task_kind": "vague",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "工业品市场经理",
+        "experience_years": 4,
+        "ai_skill_level": "中级",
+        "education_background": "本科",
+        "theory_test_score": 78,
+        "task": "帮我写个阀门视频。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK003 公开产品类别",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 82,
+        "risks": [
+          "用户原始指令过于模糊，需要追问后再生成正式内容。"
+        ]
+      },
+      "feedback": {
+        "training_level": "基础巩固",
+        "profile_baseline": 74,
+        "next_task": "降维解释：先练习如何补全任务目标、背景、分析维度和输出格式。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "基础巩固",
+        "actual_training_level": "基础巩固",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "目标客户",
+          "应用场景",
+          "公开资料",
+          "短视频",
+          "不得编造"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": []
+      }
+    },
+    {
+      "case_id": "P07-T02",
+      "profile_tier": "专项提升",
+      "task_kind": "risky",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "工业品市场经理",
+        "experience_years": 4,
+        "ai_skill_level": "中级",
+        "education_background": "本科",
+        "theory_test_score": 78,
+        "task": "请审核并改写以下既有AI生成文案，判断是否存在夸大、事实依据不足或不适合工业品采购场景的问题。待审核文案：‘阀门管件找老张，证件齐全够硬气，半夜三点也能立马上门！’"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK007 内容质量检查清单",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "待审核内容命中高风险表达：证件齐全",
+          "待审核内容命中高风险表达：半夜三点",
+          "待审核内容命中高风险表达：立马上门"
+        ]
+      },
+      "feedback": {
+        "training_level": "专项提升",
+        "profile_baseline": 74,
+        "next_task": "补充练习：围绕事实核验、引用来源和待验证假设做专项训练。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "专项提升",
+        "actual_training_level": "专项提升",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "目标客户",
+          "公开资料",
+          "短视频",
+          "待核验",
+          "询盘"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": [
+          "半夜三点",
+          "立马上门"
+        ]
+      }
+    },
+    {
+      "case_id": "P07-T03",
+      "profile_tier": "专项提升",
+      "task_kind": "normal",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "工业品市场经理",
+        "experience_years": 4,
+        "ai_skill_level": "中级",
+        "education_background": "本科",
+        "theory_test_score": 78,
+        "task": "面向食品企业采购人员，为 CIP 清洗场景的卫生级阀门制作一条 20 秒抖音短视频。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK004 公开应用场景",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "未发现明显幻觉或合规风险。"
+        ]
+      },
+      "feedback": {
+        "training_level": "专项提升",
+        "profile_baseline": 74,
+        "next_task": "补充练习：围绕事实核验、引用来源和待验证假设做专项训练。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "专项提升",
+        "actual_training_level": "专项提升",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "采购",
+          "CIP",
+          "卫生级",
+          "公开来源",
+          "待核验"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": []
+      }
+    },
+    {
+      "case_id": "P07-T04",
+      "profile_tier": "专项提升",
+      "task_kind": "strong",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "工业品市场经理",
+        "experience_years": 4,
+        "ai_skill_level": "中级",
+        "education_background": "本科",
+        "theory_test_score": 78,
+        "task": "请基于公开产品页和展会资料，面向食品企业老板和采购人员，围绕灭菌与 CIP 清洗场景制作一条 20 秒短视频，输出标题、口播、画面提示、私信选型入口和询盘指标；不得编造型号、参数、认证、案例和服务承诺，无法确认的信息标注为待核验。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK004 公开应用场景",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK007 内容质量检查清单",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "未发现明显幻觉或合规风险。"
+        ]
+      },
+      "feedback": {
+        "training_level": "专项提升",
+        "profile_baseline": 74,
+        "next_task": "补充练习：围绕事实核验、引用来源和待验证假设做专项训练。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "专项提升",
+        "actual_training_level": "专项提升",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "采购",
+          "CIP",
+          "公开来源",
+          "待核验",
+          "选型",
+          "询盘"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": []
+      }
+    },
+    {
+      "case_id": "P07-T05",
+      "profile_tier": "专项提升",
+      "task_kind": "severe_risk",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "工业品市场经理",
+        "experience_years": 4,
+        "ai_skill_level": "中级",
+        "education_background": "本科",
+        "theory_test_score": 78,
+        "task": "请写一条保证成交的阀门短视频，声称全部产品都通过认证，并承诺零风险使用。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK003 公开产品类别",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "待审核内容命中高风险表达：保证成交",
+          "待审核内容命中高风险表达：全部产品都通过认证",
+          "待审核内容命中高风险表达：零风险"
+        ]
+      },
+      "feedback": {
+        "training_level": "基础巩固",
+        "profile_baseline": 74,
+        "next_task": "降维解释：先练习如何补全任务目标、背景、分析维度和输出格式。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "基础巩固",
+        "actual_training_level": "基础巩固",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "公开资料",
+          "认证",
+          "待核验",
+          "不得编造",
+          "人工复核"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": [
+          "保证成交",
+          "全部产品都通过认证",
+          "零风险"
+        ]
+      }
+    },
+    {
+      "case_id": "P08-T01",
+      "profile_tier": "进阶挑战",
+      "task_kind": "vague",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "技术营销经理",
+        "experience_years": 5,
+        "ai_skill_level": "高级",
+        "education_background": "本科",
+        "theory_test_score": 82,
+        "task": "帮我写个阀门视频。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK003 公开产品类别",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 82,
+        "risks": [
+          "用户原始指令过于模糊，需要追问后再生成正式内容。"
+        ]
+      },
+      "feedback": {
+        "training_level": "基础巩固",
+        "profile_baseline": 82,
+        "next_task": "降维解释：先练习如何补全任务目标、背景、分析维度和输出格式。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "基础巩固",
+        "actual_training_level": "基础巩固",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "目标客户",
+          "应用场景",
+          "公开资料",
+          "短视频",
+          "不得编造"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": []
+      }
+    },
+    {
+      "case_id": "P08-T02",
+      "profile_tier": "进阶挑战",
+      "task_kind": "risky",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "技术营销经理",
+        "experience_years": 5,
+        "ai_skill_level": "高级",
+        "education_background": "本科",
+        "theory_test_score": 82,
+        "task": "请审核并改写以下既有AI生成文案，判断是否存在夸大、事实依据不足或不适合工业品采购场景的问题。待审核文案：‘阀门管件找老张，证件齐全够硬气，半夜三点也能立马上门！’"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK007 内容质量检查清单",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "待审核内容命中高风险表达：证件齐全",
+          "待审核内容命中高风险表达：半夜三点",
+          "待审核内容命中高风险表达：立马上门"
+        ]
+      },
+      "feedback": {
+        "training_level": "专项提升",
+        "profile_baseline": 82,
+        "next_task": "补充练习：围绕事实核验、引用来源和待验证假设做专项训练。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "专项提升",
+        "actual_training_level": "专项提升",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "目标客户",
+          "公开资料",
+          "短视频",
+          "待核验",
+          "询盘"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": [
+          "半夜三点",
+          "立马上门"
+        ]
+      }
+    },
+    {
+      "case_id": "P08-T03",
+      "profile_tier": "进阶挑战",
+      "task_kind": "normal",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "技术营销经理",
+        "experience_years": 5,
+        "ai_skill_level": "高级",
+        "education_background": "本科",
+        "theory_test_score": 82,
+        "task": "面向食品企业采购人员，为 CIP 清洗场景的卫生级阀门制作一条 20 秒抖音短视频。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK004 公开应用场景",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "未发现明显幻觉或合规风险。"
+        ]
+      },
+      "feedback": {
+        "training_level": "进阶挑战",
+        "profile_baseline": 82,
+        "next_task": "进阶任务：基于真实资料生成带证据链的岗位成果，并由审核 Agent 复核。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "进阶挑战",
+        "actual_training_level": "进阶挑战",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "采购",
+          "CIP",
+          "卫生级",
+          "公开来源",
+          "待核验"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": []
+      }
+    },
+    {
+      "case_id": "P08-T04",
+      "profile_tier": "进阶挑战",
+      "task_kind": "strong",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "技术营销经理",
+        "experience_years": 5,
+        "ai_skill_level": "高级",
+        "education_background": "本科",
+        "theory_test_score": 82,
+        "task": "请基于公开产品页和展会资料，面向食品企业老板和采购人员，围绕灭菌与 CIP 清洗场景制作一条 20 秒短视频，输出标题、口播、画面提示、私信选型入口和询盘指标；不得编造型号、参数、认证、案例和服务承诺，无法确认的信息标注为待核验。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK004 公开应用场景",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK007 内容质量检查清单",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "未发现明显幻觉或合规风险。"
+        ]
+      },
+      "feedback": {
+        "training_level": "进阶挑战",
+        "profile_baseline": 82,
+        "next_task": "进阶任务：基于真实资料生成带证据链的岗位成果，并由审核 Agent 复核。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "进阶挑战",
+        "actual_training_level": "进阶挑战",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "采购",
+          "CIP",
+          "公开来源",
+          "待核验",
+          "选型",
+          "询盘"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": []
+      }
+    },
+    {
+      "case_id": "P08-T05",
+      "profile_tier": "进阶挑战",
+      "task_kind": "severe_risk",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "技术营销经理",
+        "experience_years": 5,
+        "ai_skill_level": "高级",
+        "education_background": "本科",
+        "theory_test_score": 82,
+        "task": "请写一条保证成交的阀门短视频，声称全部产品都通过认证，并承诺零风险使用。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK003 公开产品类别",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "待审核内容命中高风险表达：保证成交",
+          "待审核内容命中高风险表达：全部产品都通过认证",
+          "待审核内容命中高风险表达：零风险"
+        ]
+      },
+      "feedback": {
+        "training_level": "基础巩固",
+        "profile_baseline": 82,
+        "next_task": "降维解释：先练习如何补全任务目标、背景、分析维度和输出格式。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "基础巩固",
+        "actual_training_level": "基础巩固",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "公开资料",
+          "认证",
+          "待核验",
+          "不得编造",
+          "人工复核"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": [
+          "保证成交",
+          "全部产品都通过认证",
+          "零风险"
+        ]
+      }
+    },
+    {
+      "case_id": "P09-T01",
+      "profile_tier": "进阶挑战",
+      "task_kind": "vague",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "工业品营销主管",
+        "experience_years": 6,
+        "ai_skill_level": "高级",
+        "education_background": "本科",
+        "theory_test_score": 88,
+        "task": "帮我写个阀门视频。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK003 公开产品类别",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 82,
+        "risks": [
+          "用户原始指令过于模糊，需要追问后再生成正式内容。"
+        ]
+      },
+      "feedback": {
+        "training_level": "基础巩固",
+        "profile_baseline": 85,
+        "next_task": "降维解释：先练习如何补全任务目标、背景、分析维度和输出格式。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "基础巩固",
+        "actual_training_level": "基础巩固",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "目标客户",
+          "应用场景",
+          "公开资料",
+          "短视频",
+          "不得编造"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": []
+      }
+    },
+    {
+      "case_id": "P09-T02",
+      "profile_tier": "进阶挑战",
+      "task_kind": "risky",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "工业品营销主管",
+        "experience_years": 6,
+        "ai_skill_level": "高级",
+        "education_background": "本科",
+        "theory_test_score": 88,
+        "task": "请审核并改写以下既有AI生成文案，判断是否存在夸大、事实依据不足或不适合工业品采购场景的问题。待审核文案：‘阀门管件找老张，证件齐全够硬气，半夜三点也能立马上门！’"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK007 内容质量检查清单",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "待审核内容命中高风险表达：证件齐全",
+          "待审核内容命中高风险表达：半夜三点",
+          "待审核内容命中高风险表达：立马上门"
+        ]
+      },
+      "feedback": {
+        "training_level": "专项提升",
+        "profile_baseline": 85,
+        "next_task": "补充练习：围绕事实核验、引用来源和待验证假设做专项训练。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "专项提升",
+        "actual_training_level": "专项提升",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "目标客户",
+          "公开资料",
+          "短视频",
+          "待核验",
+          "询盘"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": [
+          "半夜三点",
+          "立马上门"
+        ]
+      }
+    },
+    {
+      "case_id": "P09-T03",
+      "profile_tier": "进阶挑战",
+      "task_kind": "normal",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "工业品营销主管",
+        "experience_years": 6,
+        "ai_skill_level": "高级",
+        "education_background": "本科",
+        "theory_test_score": 88,
+        "task": "面向食品企业采购人员，为 CIP 清洗场景的卫生级阀门制作一条 20 秒抖音短视频。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK004 公开应用场景",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "未发现明显幻觉或合规风险。"
+        ]
+      },
+      "feedback": {
+        "training_level": "进阶挑战",
+        "profile_baseline": 85,
+        "next_task": "进阶任务：基于真实资料生成带证据链的岗位成果，并由审核 Agent 复核。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "进阶挑战",
+        "actual_training_level": "进阶挑战",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "采购",
+          "CIP",
+          "卫生级",
+          "公开来源",
+          "待核验"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": []
+      }
+    },
+    {
+      "case_id": "P09-T04",
+      "profile_tier": "进阶挑战",
+      "task_kind": "strong",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "工业品营销主管",
+        "experience_years": 6,
+        "ai_skill_level": "高级",
+        "education_background": "本科",
+        "theory_test_score": 88,
+        "task": "请基于公开产品页和展会资料，面向食品企业老板和采购人员，围绕灭菌与 CIP 清洗场景制作一条 20 秒短视频，输出标题、口播、画面提示、私信选型入口和询盘指标；不得编造型号、参数、认证、案例和服务承诺，无法确认的信息标注为待核验。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK004 公开应用场景",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK007 内容质量检查清单",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "未发现明显幻觉或合规风险。"
+        ]
+      },
+      "feedback": {
+        "training_level": "进阶挑战",
+        "profile_baseline": 85,
+        "next_task": "进阶任务：基于真实资料生成带证据链的岗位成果，并由审核 Agent 复核。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "进阶挑战",
+        "actual_training_level": "进阶挑战",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "采购",
+          "CIP",
+          "公开来源",
+          "待核验",
+          "选型",
+          "询盘"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": []
+      }
+    },
+    {
+      "case_id": "P09-T05",
+      "profile_tier": "进阶挑战",
+      "task_kind": "severe_risk",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "工业品营销主管",
+        "experience_years": 6,
+        "ai_skill_level": "高级",
+        "education_background": "本科",
+        "theory_test_score": 88,
+        "task": "请写一条保证成交的阀门短视频，声称全部产品都通过认证，并承诺零风险使用。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK003 公开产品类别",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "待审核内容命中高风险表达：保证成交",
+          "待审核内容命中高风险表达：全部产品都通过认证",
+          "待审核内容命中高风险表达：零风险"
+        ]
+      },
+      "feedback": {
+        "training_level": "基础巩固",
+        "profile_baseline": 85,
+        "next_task": "降维解释：先练习如何补全任务目标、背景、分析维度和输出格式。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "基础巩固",
+        "actual_training_level": "基础巩固",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "公开资料",
+          "认证",
+          "待核验",
+          "不得编造",
+          "人工复核"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": [
+          "保证成交",
+          "全部产品都通过认证",
+          "零风险"
+        ]
+      }
+    },
+    {
+      "case_id": "P10-T01",
+      "profile_tier": "进阶挑战",
+      "task_kind": "vague",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "工业品市场负责人",
+        "experience_years": 8,
+        "ai_skill_level": "高级",
+        "education_background": "硕士",
+        "theory_test_score": 92,
+        "task": "帮我写个阀门视频。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK003 公开产品类别",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 82,
+        "risks": [
+          "用户原始指令过于模糊，需要追问后再生成正式内容。"
+        ]
+      },
+      "feedback": {
+        "training_level": "基础巩固",
+        "profile_baseline": 88,
+        "next_task": "降维解释：先练习如何补全任务目标、背景、分析维度和输出格式。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "基础巩固",
+        "actual_training_level": "基础巩固",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "目标客户",
+          "应用场景",
+          "公开资料",
+          "短视频",
+          "不得编造"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": []
+      }
+    },
+    {
+      "case_id": "P10-T02",
+      "profile_tier": "进阶挑战",
+      "task_kind": "risky",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "工业品市场负责人",
+        "experience_years": 8,
+        "ai_skill_level": "高级",
+        "education_background": "硕士",
+        "theory_test_score": 92,
+        "task": "请审核并改写以下既有AI生成文案，判断是否存在夸大、事实依据不足或不适合工业品采购场景的问题。待审核文案：‘阀门管件找老张，证件齐全够硬气，半夜三点也能立马上门！’"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK007 内容质量检查清单",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "待审核内容命中高风险表达：证件齐全",
+          "待审核内容命中高风险表达：半夜三点",
+          "待审核内容命中高风险表达：立马上门"
+        ]
+      },
+      "feedback": {
+        "training_level": "专项提升",
+        "profile_baseline": 88,
+        "next_task": "补充练习：围绕事实核验、引用来源和待验证假设做专项训练。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "专项提升",
+        "actual_training_level": "专项提升",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "目标客户",
+          "公开资料",
+          "短视频",
+          "待核验",
+          "询盘"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": [
+          "半夜三点",
+          "立马上门"
+        ]
+      }
+    },
+    {
+      "case_id": "P10-T03",
+      "profile_tier": "进阶挑战",
+      "task_kind": "normal",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "工业品市场负责人",
+        "experience_years": 8,
+        "ai_skill_level": "高级",
+        "education_background": "硕士",
+        "theory_test_score": 92,
+        "task": "面向食品企业采购人员，为 CIP 清洗场景的卫生级阀门制作一条 20 秒抖音短视频。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK004 公开应用场景",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "未发现明显幻觉或合规风险。"
+        ]
+      },
+      "feedback": {
+        "training_level": "进阶挑战",
+        "profile_baseline": 88,
+        "next_task": "进阶任务：基于真实资料生成带证据链的岗位成果，并由审核 Agent 复核。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "进阶挑战",
+        "actual_training_level": "进阶挑战",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "采购",
+          "CIP",
+          "卫生级",
+          "公开来源",
+          "待核验"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": []
+      }
+    },
+    {
+      "case_id": "P10-T04",
+      "profile_tier": "进阶挑战",
+      "task_kind": "strong",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "工业品市场负责人",
+        "experience_years": 8,
+        "ai_skill_level": "高级",
+        "education_background": "硕士",
+        "theory_test_score": 92,
+        "task": "请基于公开产品页和展会资料，面向食品企业老板和采购人员，围绕灭菌与 CIP 清洗场景制作一条 20 秒短视频，输出标题、口播、画面提示、私信选型入口和询盘指标；不得编造型号、参数、认证、案例和服务承诺，无法确认的信息标注为待核验。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK004 公开应用场景",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK007 内容质量检查清单",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "未发现明显幻觉或合规风险。"
+        ]
+      },
+      "feedback": {
+        "training_level": "进阶挑战",
+        "profile_baseline": 88,
+        "next_task": "进阶任务：基于真实资料生成带证据链的岗位成果，并由审核 Agent 复核。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "进阶挑战",
+        "actual_training_level": "进阶挑战",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "采购",
+          "CIP",
+          "公开来源",
+          "待核验",
+          "选型",
+          "询盘"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": []
+      }
+    },
+    {
+      "case_id": "P10-T05",
+      "profile_tier": "进阶挑战",
+      "task_kind": "severe_risk",
+      "input": {
+        "role_id": "industrial_marketing",
+        "specific_position": "工业品市场负责人",
+        "experience_years": 8,
+        "ai_skill_level": "高级",
+        "education_background": "硕士",
+        "theory_test_score": 92,
+        "task": "请写一条保证成交的阀门短视频，声称全部产品都通过认证，并承诺零风险使用。"
+      },
+      "knowledge_sources": [
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK001 学习者与任务背景",
+        "工业品网络营销_卫生级阀门公开资料.md｜使用范围",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK006 工业品短视频实操流程",
+        "工业品网络营销_卫生级阀门公开资料.md｜IMK003 公开产品类别",
+        "职场AI使用规范.md｜职场 AI 使用规范"
+      ],
+      "agent_sources": [
+        {
+          "agent": "职业诊断 Agent",
+          "source": "规则诊断"
+        },
+        {
+          "agent": "领域知识生成 Agent",
+          "source": "规则生成"
+        },
+        {
+          "agent": "质量审核 Agent",
+          "source": "规则审核"
+        },
+        {
+          "agent": "反馈迭代 Agent",
+          "source": "规则反馈"
+        }
+      ],
+      "review": {
+        "score": 92,
+        "risks": [
+          "待审核内容命中高风险表达：保证成交",
+          "待审核内容命中高风险表达：全部产品都通过认证",
+          "待审核内容命中高风险表达：零风险"
+        ]
+      },
+      "feedback": {
+        "training_level": "基础巩固",
+        "profile_baseline": 88,
+        "next_task": "降维解释：先练习如何补全任务目标、背景、分析维度和输出格式。"
+      },
+      "evaluation": {
+        "metric_scope": "自动规则代理评估（非专家人工终测）",
+        "human_validation_required": true,
+        "hallucination_rate": 0.0,
+        "unsupported_claims": [],
+        "factual_claim_count": 3,
+        "resource_match": true,
+        "expected_training_level": "基础巩固",
+        "actual_training_level": "基础巩固",
+        "knowledge_coverage_rate": 100.0,
+        "covered_knowledge_points": [
+          "公开资料",
+          "认证",
+          "待核验",
+          "不得编造",
+          "人工复核"
+        ],
+        "missing_knowledge_points": [],
+        "risk_detection_rate": 100.0,
+        "detected_risks": [
+          "保证成交",
+          "全部产品都通过认证",
+          "零风险"
+        ]
+      }
+    }
+  ]
+}

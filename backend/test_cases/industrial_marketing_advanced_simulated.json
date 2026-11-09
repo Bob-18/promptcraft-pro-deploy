@@ -1,0 +1,15 @@
+{
+  "case_id": "IM-DEEP-003",
+  "profile_type": "模拟测试画像",
+  "data_status": "用于验证高基础学习者的进阶挑战和跨平台事实一致性，不代表真实用户",
+  "role_id": "industrial_marketing",
+  "specific_position": "工业品营销主管",
+  "experience_years": 6,
+  "ai_skill_level": "高级",
+  "education_background": "本科",
+  "theory_test_score": 88,
+  "task": "请基于公开产品页和展会资料，面向食品生产企业老板和采购人员，围绕食品灭菌与 CIP 清洗场景策划一条 20 秒抖音短视频和一条 B 站讲解提纲，输出标题、口播、画面提示、资料来源、私信选型入口和询盘复盘指标；不得编造型号、材质、温压、认证、客户案例和服务承诺，无法确认的信息标注为待核验。",
+  "expected_training_level": "进阶挑战",
+  "required_knowledge_points": ["采购", "CIP", "公开来源", "待核验", "选型", "询盘"],
+  "forbidden_claims": ["保证成交", "全网第一", "全部通过认证", "100%", "零风险"]
+}

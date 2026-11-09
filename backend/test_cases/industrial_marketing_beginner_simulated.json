@@ -1,0 +1,15 @@
+{
+  "case_id": "IM-DEEP-002",
+  "profile_type": "模拟测试画像",
+  "data_status": "用于验证低基础学习者的降维解释和资源难度适配，不代表真实用户",
+  "role_id": "industrial_marketing",
+  "specific_position": "工业品短视频运营助理",
+  "experience_years": 0,
+  "ai_skill_level": "初级",
+  "education_background": "大专",
+  "theory_test_score": 40,
+  "task": "帮我写个阀门视频。",
+  "expected_training_level": "基础巩固",
+  "required_knowledge_points": ["目标客户", "应用场景", "公开资料", "短视频", "不得编造"],
+  "forbidden_claims": ["保证成交", "全网第一", "全部通过认证", "100%", "零风险"]
+}

@@ -1,0 +1,9 @@
+{
+  "role_id": "smart_manufacturing",
+  "specific_position": "产线设备维护员",
+  "experience_years": 2,
+  "ai_skill_level": "初级",
+  "education_background": "本科",
+  "theory_test_score": 66,
+  "task": "基于设备报警记录、传感器数据和近期工艺参数变化，分析产线设备异常原因，输出可能原因、排查步骤、风险等级和人工复核建议。"
+}

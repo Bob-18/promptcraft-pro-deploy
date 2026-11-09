@@ -1,0 +1,9 @@
+{
+  "role_id": "product_manager",
+  "specific_position": "产品经理",
+  "experience_years": 4,
+  "ai_skill_level": "中级",
+  "education_background": "本科",
+  "theory_test_score": 78,
+  "task": "请基于用户反馈和业务目标，梳理需求优先级，并输出 PRD 结构、风险点和验证指标。"
+}

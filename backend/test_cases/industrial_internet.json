@@ -1,0 +1,9 @@
+{
+  "role_id": "industrial_internet",
+  "specific_position": "工业互联网运维员",
+  "experience_years": 3,
+  "ai_skill_level": "中级",
+  "education_background": "本科",
+  "theory_test_score": 70,
+  "task": "基于工业互联网平台告警日志、设备运行状态和历史处置记录，分析告警原因、影响范围、优先级和运维处置流程，并标注需要人工确认的数据。"
+}

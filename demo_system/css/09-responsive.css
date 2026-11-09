@@ -1,0 +1,263 @@
+@media (max-width: 1180px) {
+  .profile-center-layout,
+  .profile-form-grid,
+  .training-context,
+  .training-area,
+  .coach-area,
+  .progress-list,
+  .quick-guide,
+  .role-card-grid,
+  .learning-report-grid,
+  .test-list,
+  .training-wizard,
+  .mastery-decision,
+  .growth-proof-summary,
+  .mastery-route {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .mode-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .mode-start-card:not(:last-child)::after {
+    display: none;
+  }
+
+  .active-test-list,
+  .test-sequence {
+    grid-template-columns: 1fr;
+  }
+
+  .mastery-decision b {
+    text-align: left;
+  }
+
+  body[data-training-stage] .training-area,
+  body[data-training-stage] .coach-area {
+    grid-template-columns: 180px minmax(0, 1fr);
+  }
+
+  body[data-training-stage] .training-wizard {
+    grid-column: 2;
+  }
+
+  body[data-training-stage] .input-panel,
+  body[data-training-stage] .coach-input,
+  body[data-training-stage] .score-panel,
+  body[data-training-stage] .progress-board {
+    grid-column: 2;
+    grid-row: auto;
+    position: static;
+  }
+}
+
+@media (max-width: 720px) {
+  .workbench,
+  .profile-panel {
+    padding: 16px;
+  }
+
+  .topbar,
+  .panel-heading,
+  .diagnosis {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .diagnosis {
+    grid-template-columns: 1fr;
+  }
+
+  .status-pill,
+  .diagnosis b {
+    white-space: normal;
+  }
+
+  .profile-grid,
+  .training-mode-list,
+  .role-chip-list,
+  .app-nav {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .quick-guide {
+    gap: 8px;
+  }
+
+  .guide-step {
+    min-height: 68px;
+  }
+
+  .role-start,
+  .mode-start {
+    min-height: auto;
+    padding: 18px;
+  }
+
+  .start-heading h3 {
+    font-size: 23px;
+  }
+
+  .role-start-card,
+  .mode-start-card {
+    min-height: 112px;
+  }
+
+  .history-item {
+    grid-template-columns: 1fr;
+  }
+
+  .history-score {
+    text-align: left;
+  }
+
+  .tabs {
+    overflow-x: auto;
+  }
+
+  .tabs button {
+    min-width: 112px;
+  }
+
+  .mastery-goal-strip,
+  .mastery-decision,
+  .training-comparison,
+  .growth-proof-summary,
+  .mastery-route {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-arrow {
+    transform: rotate(90deg);
+  }
+
+  .growth-actions,
+  .next-focus {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .hint-coach {
+    grid-template-columns: 1fr;
+  }
+
+  .hint-content {
+    grid-column: 1;
+  }
+
+  body[data-training-stage] .workbench {
+    padding: 12px;
+  }
+
+  body[data-training-stage] .training-area,
+  body[data-training-stage] .coach-area {
+    grid-template-columns: 1fr;
+  }
+
+  body[data-training-stage] .workbench-hero,
+  body[data-training-stage] .topbar {
+    align-items: flex-start;
+  }
+
+  body[data-training-stage] .status-pill {
+    display: none;
+  }
+
+  body[data-training-stage] .mastery-goal-strip,
+  body[data-training-stage] .training-context {
+    grid-template-columns: 1fr;
+  }
+
+  body[data-training-stage] .learning-rail,
+  body[data-training-stage] .training-wizard,
+  body[data-training-stage] .input-panel,
+  body[data-training-stage] .progress-board,
+  body[data-training-stage] .coach-input,
+  body[data-training-stage] .score-panel {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .learning-rail {
+    position: static;
+    min-height: auto;
+    padding: 12px;
+  }
+
+  .rail-heading,
+  .rail-note {
+    display: none;
+  }
+
+  .rail-modes {
+    grid-template-columns: repeat(5, minmax(54px, 1fr));
+    margin-top: 0;
+  }
+
+  .rail-mode {
+    min-height: 58px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 5px;
+    text-align: center;
+  }
+
+  .rail-mode b {
+    width: 26px;
+    height: 26px;
+  }
+
+  .rail-mode span {
+    font-size: 10px;
+  }
+
+  .rail-mode small {
+    display: none;
+  }
+
+  body[data-training-stage] .training-wizard {
+    grid-template-columns: repeat(4, minmax(80px, 1fr));
+    overflow-x: auto;
+  }
+
+  body[data-training-stage] .wizard-step span {
+    display: none;
+  }
+
+  body[data-training-stage] .wizard-step {
+    min-width: 78px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 4px;
+    padding: 7px 4px;
+    text-align: center;
+  }
+
+  body[data-training-stage] .wizard-step b {
+    width: 26px;
+    height: 26px;
+  }
+
+  body[data-training-stage] .wizard-step strong {
+    font-size: 10px;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  body[data-training-stage] .wizard-step:nth-child(1) strong,
+  body[data-training-stage] .wizard-step:nth-child(2) strong,
+  body[data-training-stage] .wizard-step:nth-child(3) strong,
+  body[data-training-stage] .wizard-step:nth-child(4) strong {
+    font-size: 0;
+  }
+
+  body[data-training-stage] .wizard-step:nth-child(1) strong::after { content: "输入"; font-size: 10px; }
+  body[data-training-stage] .wizard-step:nth-child(2) strong::after { content: "改写"; font-size: 10px; }
+  body[data-training-stage] .wizard-step:nth-child(3) strong::after { content: "评分"; font-size: 10px; }
+  body[data-training-stage] .wizard-step:nth-child(4) strong::after { content: "提升"; font-size: 10px; }
+}

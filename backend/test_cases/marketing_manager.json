@@ -1,0 +1,9 @@
+{
+  "role_id": "marketing_manager",
+  "specific_position": "市场运营经理",
+  "experience_years": 5,
+  "ai_skill_level": "初级",
+  "education_background": "本科",
+  "theory_test_score": 62,
+  "task": "以麦肯锡风格，对比 A 产品和 B 产品的用户体验，重点分析 C 功能，输出一份给管理层看的竞品分析报告。"
+}

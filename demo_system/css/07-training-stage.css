@@ -1,0 +1,312 @@
+body[data-training-stage] {
+  background: #eef2f1;
+}
+
+body[data-training-stage] .workbench {
+  width: min(1500px, 100%);
+  padding: 20px 24px 34px;
+}
+
+body[data-training-stage] .workbench-hero,
+body[data-training-stage] .topbar {
+  padding: 4px 2px 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+body[data-training-stage] .topbar h2 {
+  font-size: 23px;
+}
+
+body[data-training-stage] .status-pill {
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: var(--navy);
+  color: #fff;
+}
+
+body[data-training-stage] .training-area,
+body[data-training-stage] .coach-area {
+  grid-template-columns: 210px minmax(520px, 1fr) 330px;
+  gap: 14px;
+  align-items: start;
+}
+
+body[data-training-stage] .learning-rail {
+  display: block;
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  position: sticky;
+  top: 16px;
+  min-height: 580px;
+  padding: 18px 14px;
+  border-radius: var(--radius-md);
+  background: var(--navy);
+  color: #fff;
+}
+
+.rail-heading span,
+.rail-heading strong,
+.rail-heading small,
+.rail-note span,
+.rail-note strong,
+.rail-note small,
+.rail-mode span,
+.rail-mode small {
+  display: block;
+}
+
+.rail-heading {
+  padding: 2px 6px 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.rail-heading span,
+.rail-note span {
+  color: #83cfc4;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.rail-heading strong {
+  margin: 6px 0;
+  font-size: 17px;
+}
+
+.rail-heading small,
+.rail-note small {
+  color: #b8c8cf;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.rail-modes {
+  display: grid;
+  gap: 5px;
+  margin-top: 14px;
+}
+
+.rail-mode {
+  width: 100%;
+  min-height: 62px;
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 9px;
+  align-items: center;
+  padding: 9px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  text-align: left;
+}
+
+.rail-mode b {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: #b8c8cf;
+  font-size: 11px;
+}
+
+.rail-mode span {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.rail-mode small {
+  margin-top: 3px;
+  color: #9eb2bc;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.rail-mode:hover,
+.rail-mode.active {
+  border-color: rgba(131, 207, 196, 0.35);
+  background: rgba(131, 207, 196, 0.13);
+}
+
+.rail-mode.active b {
+  background: #83cfc4;
+  color: var(--navy);
+}
+
+.rail-mode.active small {
+  color: #d8ece8;
+}
+
+.rail-note {
+  margin-top: 18px;
+  padding: 13px 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.rail-note strong {
+  margin: 5px 0 3px;
+  font-size: 14px;
+}
+
+body[data-training-stage] .training-wizard {
+  grid-column: 2 / 4;
+  grid-row: 1;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: #fff;
+}
+
+body[data-training-stage] .wizard-step {
+  min-height: 62px;
+  border: 0;
+  border-right: 1px solid var(--line);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+body[data-training-stage] .wizard-step:last-child {
+  border-right: 0;
+}
+
+body[data-training-stage] .wizard-step.active {
+  background: var(--mint);
+}
+
+body[data-training-stage] .input-panel {
+  grid-column: 2;
+  grid-row: 2;
+  max-width: none;
+  border-top: 4px solid var(--teal);
+  box-shadow: var(--shadow-training);
+}
+
+body[data-training-stage] .progress-board {
+  display: block;
+  grid-column: 3;
+  grid-row: 2;
+  position: sticky;
+  top: 16px;
+  border-top: 4px solid var(--blue);
+  box-shadow: var(--shadow-training);
+}
+
+body[data-training-stage] .training-context {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+body[data-training-stage] .training-context div {
+  min-height: 58px;
+  background: #f7f9f8;
+}
+
+body[data-training-stage] .training-context div:nth-child(1),
+body[data-training-stage] .training-context div:nth-child(2) {
+  display: none;
+}
+
+body[data-training-stage] .input-panel textarea {
+  min-height: 210px;
+  background: #fff;
+  font-size: 16px;
+}
+
+body[data-training-stage] .progress-overview {
+  grid-template-columns: 68px 1fr;
+  padding: 0;
+  border: 0;
+}
+
+body[data-training-stage] .completion-ring {
+  width: 62px;
+  height: 62px;
+}
+
+body[data-training-stage] .progress-summary strong {
+  color: var(--navy);
+  font-size: 15px;
+}
+
+body[data-training-stage] .coach-area {
+  margin-top: 14px;
+}
+
+body[data-training-stage] .coach-input {
+  grid-column: 2;
+  border-top: 4px solid var(--teal);
+  box-shadow: var(--shadow-training);
+}
+
+body[data-training-stage] .score-panel {
+  grid-column: 3;
+  min-width: 0;
+  overflow: hidden;
+  border-top: 4px solid var(--amber);
+  box-shadow: var(--shadow-training);
+}
+
+body[data-training-stage] .coach-input textarea {
+  min-height: 260px;
+  background: #fff;
+  font-size: 15px;
+}
+
+body[data-training-stage] .mastery-goal-strip {
+  grid-template-columns: 1fr 100px 100px;
+}
+
+body[data-training-stage] .hint-coach {
+  background: #f6f9fb;
+}
+
+body[data-training-stage] .score-panel .empty-score {
+  min-height: 250px;
+  display: grid;
+  align-content: center;
+  text-align: center;
+}
+
+body[data-training-stage] .panel-heading h3 {
+  font-size: 19px;
+}
+
+body[data-training-stage] .primary-button {
+  background: var(--navy);
+  border-color: var(--navy);
+}
+
+body[data-training-stage] .ghost-button {
+  border-color: #adc1c8;
+  color: #315266;
+}
+
+body[data-training-stage] .score-panel .mastery-decision {
+  grid-template-columns: 1fr;
+}
+
+body[data-training-stage] .score-panel .mastery-decision b {
+  text-align: left;
+  white-space: normal;
+}
+
+body[data-training-stage] .score-panel .training-comparison {
+  grid-template-columns: 1fr;
+}
+
+body[data-training-stage] .score-panel .comparison-arrow {
+  transform: rotate(90deg);
+}
+
+body[data-training-stage] .score-panel .growth-grid {
+  grid-template-columns: 1fr;
+}
+
+body[data-training-stage] .score-panel pre,
+body[data-training-stage] .score-panel p,
+body[data-training-stage] .score-panel li {
+  overflow-wrap: anywhere;
+}

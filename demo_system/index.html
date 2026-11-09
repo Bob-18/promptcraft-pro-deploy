@@ -1,0 +1,641 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>智训工坊 | PromptCraft Pro</title>
+    <link rel="stylesheet" href="./styles.css?v=20260830b" />
+  </head>
+  <body>
+    <div class="intro-overlay" id="introOverlay" role="dialog" aria-label="智训工坊开场视频">
+      <video class="intro-video" id="introVideo" playsinline preload="metadata">
+        <source src="./assets/intro.mp4" type="video/mp4" />
+      </video>
+      <button class="intro-start" id="introStart" type="button">
+        <span>点击进入</span>
+      </button>
+      <button class="intro-skip hidden-block" id="introSkip" type="button">跳过开场</button>
+    </div>
+
+    <main class="app-shell">
+      <aside class="profile-panel">
+        <div class="brand-block">
+          <div class="brand-mark">P</div>
+          <div>
+            <p class="eyebrow">PromptCraft Pro</p>
+            <h1>智训工坊</h1>
+            <p class="brand-subtitle">先选岗位，再进入对应实训</p>
+          </div>
+          <button class="home-button" id="goHome" type="button" aria-label="返回主页">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+              <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                d="M3 11.5 12 4l9 7.5M5 10v10h14V10" />
+            </svg>
+          </button>
+        </div>
+
+
+        <section class="profile-section">
+          <p class="section-kicker">岗位画像</p>
+          <div class="profile-grid">
+            <div><span>岗位</span><strong id="profileRole">市场经理</strong></div>
+            <div><span>经验</span><strong id="profileExperience">5 年</strong></div>
+            <div><span>AI 水平</span><strong id="profileAiLevel">初级</strong></div>
+            <div><span>任务</span><strong id="profileTaskType">竞品分析</strong></div>
+            <div><span>学历背景</span><strong id="profileEducation">本科</strong></div>
+            <div><span>基础测评</span><strong id="profileTheoryScore">62 分</strong></div>
+          </div>
+        </section>
+
+        <section class="profile-section">
+          <p class="section-kicker">技能掌握度</p>
+          <div class="skill-list" id="skillList"></div>
+        </section>
+
+        <section class="profile-section">
+          <p class="section-kicker">工程测试结果</p>
+          <div class="metric-list">
+            <span>自动规则代理测试 / 待专家复核</span>
+            <span>预设难度匹配代理 100%</span>
+            <span>预设词项覆盖代理 100%</span>
+            <small class="metric-note">50 条自动规则测试，不代表真实用户实验</small>
+          </div>
+        </section>
+      </aside>
+
+      <section class="workbench">
+        <header class="workbench-hero topbar">
+          <div class="hero-copy">
+            <p class="eyebrow">多智能体驱动的 Web 实训系统</p>
+            <h2>职场大模型技能实训工作台</h2>
+            <p>从岗位选择到提示词改写、结果审核与成长记录，一站式完成 AI 职场能力训练。</p>
+            <div class="hero-badges">
+              <span class="hero-badge">8 大岗位场景</span>
+              <span class="hero-badge">5 项核心能力</span>
+              <span class="hero-badge">闭环式智能反馈</span>
+            </div>
+          </div>
+          <figure class="hero-visual">
+            <img src="./assets/hero-workspace.jpg" alt="团队协作进行 AI 技能实训" width="960" height="540" loading="eager" />
+          </figure>
+        </header>
+
+        <nav class="app-nav" aria-label="系统功能导航">
+          <button class="active" data-view="train">开始实训</button>
+          <button data-view="report">学情报告</button>
+          <button data-view="resources">生成资源</button>
+          <button data-view="history">训练记录</button>
+        </nav>
+
+        <section class="role-start view-section" data-section="role">
+          <div class="start-heading">
+            <p class="section-kicker">第一步</p>
+            <h3>选择你的岗位场景</h3>
+            <p>系统会根据岗位、经验、AI 水平和理论测试分，生成不同难度的训练任务。</p>
+          </div>
+          <div class="role-card-grid">
+            <button class="role-start-card active" data-role="marketing_manager">
+              <span class="role-card-cover" aria-hidden="true">
+                <img class="role-card-photo" src="./assets/roles/marketing_manager.jpg" alt="" loading="lazy" />
+                <span class="role-card-icon"><svg aria-hidden="true"><use href="./assets/icons.svg#icon-marketing"></use></svg></span>
+              </span>
+              <span class="role-card-content">
+                <strong>市场经理</strong>
+                <span>竞品分析、活动复盘、内容策略</span>
+              </span>
+            </button>
+            <button class="role-start-card" data-role="industrial_marketing">
+              <span class="role-card-cover" aria-hidden="true">
+                <img class="role-card-photo" src="./assets/roles/industrial_marketing.jpg" alt="" loading="lazy" />
+                <span class="role-card-icon"><svg aria-hidden="true"><use href="./assets/icons.svg#icon-industrial"></use></svg></span>
+              </span>
+              <span class="role-card-content">
+                <strong>工业品网络营销</strong>
+                <span>深度实例：阀门短视频与事实核验</span>
+              </span>
+            </button>
+            <button class="role-start-card" data-role="finance_analyst">
+              <span class="role-card-cover" aria-hidden="true">
+                <img class="role-card-photo" src="./assets/roles/finance_analyst.jpg" alt="" loading="lazy" />
+                <span class="role-card-icon"><svg aria-hidden="true"><use href="./assets/icons.svg#icon-finance"></use></svg></span>
+              </span>
+              <span class="role-card-content">
+                <strong>金融分析助理</strong>
+                <span>财报摘要、风险识别、研究报告</span>
+              </span>
+            </button>
+            <button class="role-start-card" data-role="backend_developer">
+              <span class="role-card-cover" aria-hidden="true">
+                <img class="role-card-photo" src="./assets/roles/backend_developer.jpg" alt="" loading="lazy" />
+                <span class="role-card-icon"><svg aria-hidden="true"><use href="./assets/icons.svg#icon-developer"></use></svg></span>
+              </span>
+              <span class="role-card-content">
+                <strong>程序开发</strong>
+                <span>代码审查、性能优化、测试建议</span>
+              </span>
+            </button>
+            <button class="role-start-card" data-role="admin_specialist">
+              <span class="role-card-cover" aria-hidden="true">
+                <img class="role-card-photo" src="./assets/roles/admin_specialist.jpg" alt="" loading="lazy" />
+                <span class="role-card-icon"><svg aria-hidden="true"><use href="./assets/icons.svg#icon-admin"></use></svg></span>
+              </span>
+              <span class="role-card-content">
+                <strong>行政办公</strong>
+                <span>会议纪要、待办拆解、文档整理</span>
+              </span>
+            </button>
+            <button class="role-start-card" data-role="product_manager">
+              <span class="role-card-cover" aria-hidden="true">
+                <img class="role-card-photo" src="./assets/roles/product_manager.jpg" alt="" loading="lazy" />
+                <span class="role-card-icon"><svg aria-hidden="true"><use href="./assets/icons.svg#icon-product"></use></svg></span>
+              </span>
+              <span class="role-card-content">
+                <strong>产品经理</strong>
+                <span>需求分析、PRD 结构、验证指标</span>
+              </span>
+            </button>
+            <button class="role-start-card" data-role="smart_manufacturing">
+              <span class="role-card-cover" aria-hidden="true">
+                <img class="role-card-photo" src="./assets/roles/smart_manufacturing.jpg" alt="" loading="lazy" />
+                <span class="role-card-icon"><svg aria-hidden="true"><use href="./assets/icons.svg#icon-manufacturing"></use></svg></span>
+              </span>
+              <span class="role-card-content">
+                <strong>智能制造</strong>
+                <span>设备异常、工艺优化、质检报告</span>
+              </span>
+            </button>
+            <button class="role-start-card" data-role="industrial_internet">
+              <span class="role-card-cover" aria-hidden="true">
+                <img class="role-card-photo" src="./assets/roles/industrial_internet.jpg" alt="" loading="lazy" />
+                <span class="role-card-icon"><svg aria-hidden="true"><use href="./assets/icons.svg#icon-internet"></use></svg></span>
+              </span>
+              <span class="role-card-content">
+                <strong>工业互联网</strong>
+                <span>告警分析、设备监测、运维方案</span>
+              </span>
+            </button>
+          </div>
+
+          <div class="profile-center-card">
+            <div class="panel-heading compact">
+              <div>
+                <p class="section-kicker">个人中心</p>
+                <h3>完善你的专属职业画像</h3>
+              </div>
+            </div>
+
+            <div class="profile-explain">
+              <strong>为什么要填写这些信息？</strong>
+              <p>系统会根据你的具体职位、经验、AI 水平、学历和基础测评分，决定训练难度、题目类型和下一步学习路径。</p>
+            </div>
+
+            <div class="profile-center-layout">
+              <div class="profile-form-grid">
+                <label class="test-code-field">
+                  <span>匿名测试编号（正式测试时填写）</span>
+                  <input id="testParticipantInput" type="text" maxlength="20" placeholder="例如：T001" />
+                  <small>不同测试者使用不同编号，只填编号，不填写姓名；留空时按普通体验处理。</small>
+                </label>
+                <label>
+                  <span>具体职位</span>
+                  <input id="specificPositionInput" type="text" value="市场经理" />
+                  <small>例：财报分析助理、产线设备维护员</small>
+                </label>
+                <label>
+                  <span>工作年限</span>
+                  <input id="experienceInput" type="number" min="0" max="30" value="5" />
+                  <small>用于判断岗位经验深度</small>
+                </label>
+                <label>
+                  <span>AI 水平</span>
+                  <select id="aiLevelInput">
+                    <option value="初级">初级</option>
+                    <option value="中级">中级</option>
+                    <option value="高级">高级</option>
+                  </select>
+                  <small class="hint-with-tip">
+                    不确定就选初级
+                    <button class="info-dot" type="button" aria-label="查看 AI 水平说明">
+                      !
+                      <span class="info-tip" role="tooltip">
+                        <b>初级：</b>只会直接提问，缺少背景、格式和约束。<br />
+                        <b>中级：</b>能写清目标、资料、输出格式，并知道标注不确定信息。<br />
+                        <b>高级：</b>能拆解复杂任务，进行事实核验、风险审核和流程化使用。
+                      </span>
+                    </button>
+                  </small>
+                </label>
+                <label>
+                  <span>学历背景</span>
+                  <select id="educationInput">
+                    <option value="未提供">未提供</option>
+                    <option value="大专">大专</option>
+                    <option value="本科" selected>本科</option>
+                    <option value="硕士">硕士</option>
+                    <option value="博士">博士</option>
+                  </select>
+                  <small>用于估计理论基础</small>
+                </label>
+                <label>
+                  <span>基础测评分</span>
+                  <input id="theoryScoreInput" type="number" min="0" max="100" value="62" />
+                  <small>可手动填写，也可由下方入门测评生成</small>
+                </label>
+                <div class="entry-test-panel">
+                  <div>
+                    <strong>入门测评</strong>
+                    <small>5 道题自动生成基础测评分</small>
+                  </div>
+                  <button class="ghost-button" id="startEntryTest" type="button">开始入门测评</button>
+                </div>
+              </div>
+
+              <div class="profile-preview">
+                <div class="profile-preview-head">
+                  <div class="profile-preview-avatar" aria-hidden="true">AI</div>
+                  <strong>初始学情诊断报告</strong>
+                </div>
+                <div id="profilePreview">
+                  <span>系统正在根据岗位画像计算训练起点。</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="entry-test-area hidden-block" id="entryTestArea">
+              <div class="entry-test-head">
+                <div>
+                  <strong>入门测评题</strong>
+                  <span>完成后系统会自动计算基础测评分，并更新初始学情诊断报告。</span>
+                </div>
+                <button class="ghost-button" id="closeEntryTest" type="button">收起</button>
+              </div>
+              <div id="entryQuestionList"></div>
+              <button class="primary-button" id="submitEntryTest" type="button">提交入门测评</button>
+              <p class="entry-test-result" id="entryTestResult"></p>
+            </div>
+          </div>
+
+          <button class="primary-button start-next" id="goModeSelect">下一步：选择实训模式</button>
+        </section>
+
+        <section class="mode-start view-section hidden-section" data-section="mode">
+          <div class="start-heading">
+            <p class="section-kicker">第二步</p>
+            <h3>选择本轮要训练的能力</h3>
+            <p>按“会提问 → 会拆解 → 会审核 → 会应用 → 可测评”的路线训练，也可以直接选择当前最需要补的能力。</p>
+          </div>
+          <div class="mode-card-grid">
+            <button class="mode-start-card active" data-mode="prompt">
+              <span class="mode-card-cover" aria-hidden="true">
+                <img src="./assets/modes/prompt.jpg" alt="" loading="lazy" />
+                <span class="mode-card-step">01 会提问</span>
+              </span>
+              <span class="mode-card-body">
+                <strong>提示词改写</strong>
+                <span>把模糊问题改成高质量指令</span>
+                <em class="mode-card-status" data-mode-status="提示词改写">推荐起点</em>
+              </span>
+            </button>
+            <button class="mode-start-card" data-mode="workflow">
+              <span class="mode-card-cover" aria-hidden="true">
+                <img src="./assets/modes/workflow.jpg" alt="" loading="lazy" />
+                <span class="mode-card-step">02 会拆解</span>
+              </span>
+              <span class="mode-card-body">
+                <strong>任务拆解</strong>
+                <span>把复杂岗位任务拆成步骤</span>
+                <em class="mode-card-status" data-mode-status="任务拆解">待解锁</em>
+              </span>
+            </button>
+            <button class="mode-start-card" data-mode="review">
+              <span class="mode-card-cover" aria-hidden="true">
+                <img src="./assets/modes/review.jpg" alt="" loading="lazy" />
+                <span class="mode-card-step">03 会审核</span>
+              </span>
+              <span class="mode-card-body">
+                <strong>结果审核</strong>
+                <span>检查幻觉、风险和证据链</span>
+                <em class="mode-card-status" data-mode-status="结果审核">待解锁</em>
+              </span>
+            </button>
+            <button class="mode-start-card" data-mode="practice">
+              <span class="mode-card-cover" aria-hidden="true">
+                <img src="./assets/modes/practice.jpg" alt="" loading="lazy" />
+                <span class="mode-card-step">04 会应用</span>
+              </span>
+              <span class="mode-card-body">
+                <strong>岗位实战</strong>
+                <span>完成一轮岗位任务成果</span>
+                <em class="mode-card-status" data-mode-status="岗位实战">待解锁</em>
+              </span>
+            </button>
+            <button class="mode-start-card" data-mode="test">
+              <span class="mode-card-cover" aria-hidden="true">
+                <img src="./assets/modes/test.jpg" alt="" loading="lazy" />
+                <span class="mode-card-step">05 可测评</span>
+              </span>
+              <span class="mode-card-body">
+                <strong>分阶测试题</strong>
+                <span>生成基础、进阶、挑战题</span>
+                <em class="mode-card-status" data-mode-status="分阶测试题">待解锁</em>
+              </span>
+            </button>
+          </div>
+          <p class="mode-helper">选择后进入训练页，系统会完成“诊断-生成-审核-反馈”的多智能体闭环。</p>
+          <div class="start-actions">
+            <button class="ghost-button" id="backRoleSelect">返回选择岗位</button>
+            <button class="primary-button" id="goTraining">进入训练</button>
+          </div>
+        </section>
+
+        <section class="quick-guide view-section hidden-section" data-section="guide" aria-label="三步训练流程">
+          <div class="guide-step active">
+            <b>1</b>
+            <div>
+              <strong>输入岗位任务</strong>
+              <span>选择岗位，写下你想让 AI 完成的工作。</span>
+            </div>
+          </div>
+          <div class="guide-step">
+            <b>2</b>
+            <div>
+              <strong>开始训练</strong>
+              <span>系统诊断任务是否清楚，并生成训练资源。</span>
+            </div>
+          </div>
+          <div class="guide-step">
+            <b>3</b>
+            <div>
+              <strong>改写并评分</strong>
+              <span>按建议改写提示词，查看得分和提升路径。</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="training-area view-section hidden-section" data-section="train">
+          <aside class="learning-rail" aria-label="五关训练路线">
+            <div class="rail-heading">
+              <span>本期路线</span>
+              <strong>岗位 AI 五项能力</strong>
+              <small>完成迁移题才算掌握</small>
+            </div>
+            <div class="rail-modes">
+              <button class="rail-mode active" data-mode="prompt"><b>01</b><span>会提问<small>提示词改写</small></span></button>
+              <button class="rail-mode" data-mode="workflow"><b>02</b><span>会拆解<small>任务拆解</small></span></button>
+              <button class="rail-mode" data-mode="review"><b>03</b><span>会审核<small>结果审核</small></span></button>
+              <button class="rail-mode" data-mode="practice"><b>04</b><span>会应用<small>岗位实战</small></span></button>
+              <button class="rail-mode" data-mode="test"><b>05</b><span>可测评<small>分阶测试</small></span></button>
+            </div>
+            <div class="rail-note"><span>当前岗位</span><strong id="railRoleText">市场经理</strong><small id="railPositionText">市场经理</small></div>
+          </aside>
+          <div class="training-wizard">
+            <div class="wizard-step active" data-stage-card="input">
+              <b>1</b>
+              <div>
+                <strong>写下原始任务</strong>
+                <span>先按你现在的习惯问 AI，一句话也可以。</span>
+              </div>
+            </div>
+            <div class="wizard-step" data-stage-card="rewrite">
+              <b>2</b>
+              <div>
+                <strong>系统诊断并改写</strong>
+                <span>根据缺失项补充目标、资料、格式和约束。</span>
+              </div>
+            </div>
+            <div class="wizard-step" data-stage-card="scored">
+              <b>3</b>
+              <div>
+                <strong>评分反馈</strong>
+                <span>看清哪里扣分，以及下一轮应该怎么改。</span>
+              </div>
+            </div>
+            <div class="wizard-step" data-stage-card="retry">
+              <b>4</b>
+              <div>
+                <strong>二次提升</strong>
+                <span>带着建议再做一次，形成可见成长记录。</span>
+              </div>
+            </div>
+          </div>
+          <div class="input-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="section-kicker" id="trainingInputKicker">第 1 步：输入你原本的提问</p>
+                <h3>市场经理竞品分析</h3>
+              </div>
+              <div class="action-group">
+                <button class="ghost-button" id="backModeFromTraining">重选模式</button>
+                <button class="ghost-button" id="backRoleFromTraining">重选岗位</button>
+                <button class="ghost-button" id="fillStrongTask">填入样例任务</button>
+                <button class="primary-button" id="runAgents">开始训练</button>
+              </div>
+            </div>
+
+            <div class="training-context">
+              <div><span>当前岗位</span><strong id="trainingRoleText">市场经理</strong></div>
+              <div><span>具体职位</span><strong id="trainingPositionText">市场经理</strong></div>
+              <div><span>训练模式</span><strong id="trainingModeText">提示词改写</strong></div>
+              <div><span>训练目标</span><strong id="trainingGoalText">把模糊任务改写成高质量提示词</strong></div>
+            </div>
+
+            <label class="field-label role-control-label" for="roleSelect">1. 选择你的职业/岗位</label>
+            <div class="role-chip-list" aria-label="快速选择职业">
+              <button class="role-chip active" data-role="marketing_manager">市场经理</button>
+              <button class="role-chip" data-role="industrial_marketing">工业品营销</button>
+              <button class="role-chip" data-role="finance_analyst">金融分析</button>
+              <button class="role-chip" data-role="backend_developer">程序开发</button>
+              <button class="role-chip" data-role="admin_specialist">行政办公</button>
+              <button class="role-chip" data-role="product_manager">产品经理</button>
+              <button class="role-chip" data-role="smart_manufacturing">智能制造</button>
+              <button class="role-chip" data-role="industrial_internet">工业互联网</button>
+            </div>
+            <select id="roleSelect" aria-label="选择岗位场景">
+              <option value="marketing_manager">市场经理</option>
+              <option value="industrial_marketing">工业品网络营销</option>
+              <option value="finance_analyst">金融分析助理</option>
+              <option value="backend_developer">后端开发工程师</option>
+              <option value="admin_specialist">行政专员</option>
+              <option value="product_manager">产品经理</option>
+              <option value="smart_manufacturing">智能制造</option>
+              <option value="industrial_internet">工业互联网</option>
+            </select>
+
+            <label class="field-label" id="taskInputLabel" for="taskInput">训练前：你现在会怎么向 AI 说明工作需求</label>
+            <textarea id="taskInput" aria-label="实训任务输入" maxlength="10000">帮我写个报告。</textarea>
+            <p class="field-tip" id="taskInputTip">先按你平时的表达填写。系统会诊断缺失信息，再引导你补全目标、资料、格式和约束。</p>
+            <label class="llm-consent">
+              <input id="allowExternalLLM" type="checkbox" />
+              <span><strong>使用 DeepSeek 增强本轮训练</strong><small>开启后会发送本轮职业画像、任务文本、待审核 AI 输出（如有）和检索到的知识片段；默认关闭，仅使用本地规则。</small></span>
+            </label>
+
+            <details class="task-seed-panel">
+              <summary>没有现成项目？让系统先生成原始训练题</summary>
+              <p>填写你所在公司、部门或日常需要解决的工作任务，系统会根据岗位画像生成一条可训练的原始题目。</p>
+              <textarea id="workContextInput" aria-label="工作背景输入" maxlength="10000" placeholder="例如：我在新能源电池工厂质量部门，日常需要跟踪产线设备报警、质检异常和工艺参数变化。"></textarea>
+              <button class="ghost-button" id="generateTaskSeed">根据实际情况生成原始题目</button>
+              <p class="task-seed-result" id="taskSeedResult"></p>
+            </details>
+
+            <div class="diagnosis warning" id="diagnosisBox">
+              <div>
+                <span>诊断等级</span>
+                <strong id="diagnosisLevel">低</strong>
+              </div>
+              <p id="diagnosisText">当前指令过于模糊，需要补充任务目标、资料来源和输出格式。</p>
+              <b id="diagnosisAction">启动动态追问</b>
+            </div>
+          </div>
+
+          <div class="progress-board">
+            <div class="panel-heading compact">
+              <div>
+                <p class="section-kicker">训练状态</p>
+                <h3>本轮资源准备状态</h3>
+              </div>
+            </div>
+            <div class="progress-overview" id="progressOverview"></div>
+            <details class="agent-process">
+              <summary>查看后台智能体判断</summary>
+              <div class="progress-list" id="agentList"></div>
+            </details>
+          </div>
+        </section>
+
+        <section class="coach-area view-section" data-section="train">
+          <div class="training-mode-panel">
+            <div class="panel-heading compact">
+              <div>
+                <p class="section-kicker">训练模式</p>
+                <h3>选择本轮要训练的能力</h3>
+              </div>
+            </div>
+            <div class="training-mode-list" id="trainingModeList">
+              <button class="training-mode active" data-mode="prompt">
+                <strong>提示词改写</strong>
+                <span>把模糊问题改成高质量指令</span>
+              </button>
+              <button class="training-mode" data-mode="workflow">
+                <strong>任务拆解</strong>
+                <span>把复杂岗位任务拆成步骤</span>
+              </button>
+              <button class="training-mode" data-mode="review">
+                <strong>结果审核</strong>
+                <span>检查幻觉、风险和证据链</span>
+              </button>
+              <button class="training-mode" data-mode="practice">
+                <strong>岗位实战</strong>
+                <span>完成一轮岗位任务成果</span>
+              </button>
+              <button class="training-mode" data-mode="test">
+                <strong>分阶测试题</strong>
+                <span>生成基础、进阶、挑战题</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="coach-input">
+            <div class="panel-heading compact">
+              <div>
+                <p class="section-kicker" id="trainingModeKicker">第 2 步：改写训练</p>
+                <h3 id="trainingModeTitle">把上面的原始任务升级为高质量提示词</h3>
+              </div>
+              <button class="primary-button" id="scorePrompt">评分</button>
+            </div>
+            <div class="mastery-goal-strip" id="masteryGoalStrip">
+              <div><span>本关目标</span><strong>把任务说清楚并可直接执行</strong></div>
+              <div><span>过关标准</span><strong>80 分</strong></div>
+              <div><span>当前轮次</span><strong>第 1 轮</strong></div>
+            </div>
+            <p class="training-hint" id="trainingModeHint">这里不是重新写一个无关任务，而是把上面的原始任务按“目标-资料-维度-格式-约束”五段式改写。改完后点击评分，系统会对比训练前后质量。</p>
+            <div class="review-source hidden-block" id="reviewSource">
+              <span>待审核的既有 AI 输出</span>
+              <textarea id="reviewSourceText" aria-label="待审核的 AI 输出" maxlength="20000"></textarea>
+              <small>系统会先放入失败样例，你也可以替换为自己实际要审核的 AI 输出；它不是“原始工作任务”。</small>
+            </div>
+            <div class="hint-coach" id="hintCoach">
+              <div>
+                <span>卡住了？教练只给提示，不直接代写</span>
+                <strong id="hintCoachTitle">先独立尝试，再按需要逐级查看</strong>
+              </div>
+              <div class="hint-actions">
+                <button class="ghost-button" type="button" data-hint-level="1">提示 1</button>
+                <button class="ghost-button" type="button" data-hint-level="2">提示 2</button>
+                <button class="ghost-button" type="button" data-hint-level="3">结构骨架</button>
+              </div>
+              <div class="hint-content hidden-block" id="hintContent"></div>
+            </div>
+            <div class="active-test-questions hidden-block" id="activeTestQuestions"></div>
+            <textarea id="rewriteInput" aria-label="提示词改写输入" maxlength="30000"></textarea>
+          </div>
+          <div class="score-panel" id="scorePanel">
+            <div class="empty-score">
+              <strong>等待评分</strong>
+              <p>评分维度：任务目标、背景资料、分析维度、输出格式、约束条件。</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="history-area view-section hidden-section" data-section="history">
+          <div class="panel-heading compact">
+            <div>
+              <p class="section-kicker">训练提升记录</p>
+              <h3>五类岗位 AI 能力成长轨迹</h3>
+            </div>
+            <div class="history-actions">
+              <span id="testCollectionStatus">普通体验模式</span>
+              <button class="ghost-button" id="exportMyRecords">导出本测试者记录</button>
+              <button class="ghost-button" id="exportLocalRecords">导出本机记录</button>
+              <button class="ghost-button" id="exportTestSummary">导出测试汇总</button>
+              <button class="ghost-button" id="clearHistory">清空本机显示</button>
+            </div>
+          </div>
+          <p class="collection-note" id="collectionNote">填写匿名测试编号并提交评分后，后台会自动记录得分、用时、薄弱项和成长变化。</p>
+          <div class="history-summary" id="historySummary"></div>
+          <div class="history-list" id="historyList"></div>
+        </section>
+
+        <section class="learning-report-area view-section hidden-section" data-section="report">
+          <div class="panel-heading compact">
+            <div>
+              <p class="section-kicker">个人学情报告</p>
+              <h3>知识盲区、资源匹配与学习路径</h3>
+            </div>
+            <div class="status-pill small">动态决策更新</div>
+          </div>
+          <div class="learning-report-grid">
+            <div class="blind-spot-card">
+              <span>知识盲区定位</span>
+              <div id="blindSpotList"></div>
+            </div>
+            <div class="difficulty-card">
+              <span>资源难度匹配曲线</span>
+              <div id="difficultyCurve"></div>
+            </div>
+            <div class="path-card">
+              <span>学习路径规划图</span>
+              <div id="learningPath"></div>
+            </div>
+            <div class="growth-evidence-card">
+              <span>训练成长证据</span>
+              <div id="growthEvidence"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="result-area view-section hidden-section" data-section="resources">
+          <div class="tabs" role="tablist" aria-label="训练结果">
+            <button class="active" data-tab="prompt">提示词模板</button>
+            <button data-tab="workflow">任务流程</button>
+            <button data-tab="review">审核报告</button>
+            <button data-tab="tests">分阶测试题</button>
+            <button data-tab="next">进阶训练</button>
+          </div>
+          <div class="result-content" id="resultContent"></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="./app.js?v=20260830b"></script>
+  </body>
+</html>

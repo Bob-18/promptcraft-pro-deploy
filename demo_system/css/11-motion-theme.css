@@ -1,0 +1,337 @@
+/* 动效与主题精修 */
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: var(--shadow-glow); }
+  50% { box-shadow: 0 0 0 6px rgba(13, 148, 136, 0.08); }
+}
+
+/* ── 全局背景 ── */
+.app-shell {
+  background: var(--color-bg);
+  background-image: var(--gradient-mesh);
+}
+
+/* ── 页面切换动效 ── */
+.view-section.view-enter {
+  animation: fadeSlideUp var(--duration-slow) var(--ease-out) both;
+}
+
+.workbench-hero {
+  animation: fadeSlideUp 0.55s var(--ease-out) both;
+}
+
+.hero-visual {
+  animation: scaleIn 0.6s var(--ease-out) 0.1s both;
+}
+
+.hero-copy {
+  animation: fadeSlideUp 0.5s var(--ease-out) 0.05s both;
+}
+
+/* ── 卡片错落入场 ── */
+.role-start:not(.hidden-section) .start-heading {
+  animation: fadeSlideUp 0.45s var(--ease-out) both;
+}
+
+.role-start:not(.hidden-section) .role-start-card {
+  animation: fadeSlideUp 0.5s var(--ease-out) both;
+}
+
+.role-start:not(.hidden-section) .role-start-card:nth-child(1) { animation-delay: 0.06s; }
+.role-start:not(.hidden-section) .role-start-card:nth-child(2) { animation-delay: 0.1s; }
+.role-start:not(.hidden-section) .role-start-card:nth-child(3) { animation-delay: 0.14s; }
+.role-start:not(.hidden-section) .role-start-card:nth-child(4) { animation-delay: 0.18s; }
+.role-start:not(.hidden-section) .role-start-card:nth-child(5) { animation-delay: 0.22s; }
+.role-start:not(.hidden-section) .role-start-card:nth-child(6) { animation-delay: 0.26s; }
+.role-start:not(.hidden-section) .role-start-card:nth-child(7) { animation-delay: 0.3s; }
+.role-start:not(.hidden-section) .role-start-card:nth-child(8) { animation-delay: 0.34s; }
+
+.role-start:not(.hidden-section) .profile-center-card {
+  animation: fadeSlideUp 0.55s var(--ease-out) 0.2s both;
+}
+
+.role-start:not(.hidden-section) .start-next {
+  animation: fadeSlideUp 0.5s var(--ease-out) 0.28s both;
+}
+
+.mode-start:not(.hidden-section) .start-heading {
+  animation: fadeSlideUp 0.45s var(--ease-out) both;
+}
+
+.mode-start:not(.hidden-section) .mode-start-card {
+  animation: fadeSlideUp 0.5s var(--ease-out) both;
+}
+
+.mode-start:not(.hidden-section) .mode-start-card:nth-child(1) { animation-delay: 0.08s; }
+.mode-start:not(.hidden-section) .mode-start-card:nth-child(2) { animation-delay: 0.14s; }
+.mode-start:not(.hidden-section) .mode-start-card:nth-child(3) { animation-delay: 0.2s; }
+.mode-start:not(.hidden-section) .mode-start-card:nth-child(4) { animation-delay: 0.26s; }
+.mode-start:not(.hidden-section) .mode-start-card:nth-child(5) { animation-delay: 0.32s; }
+
+.mode-start:not(.hidden-section) .mode-helper,
+.mode-start:not(.hidden-section) .start-actions {
+  animation: fadeSlideUp 0.5s var(--ease-out) 0.35s both;
+}
+
+/* ── 选中态光晕（静态，避免与入场动画冲突）── */
+.role-start-card.active,
+.mode-start-card.active {
+  box-shadow: var(--shadow-glow), 0 12px 32px rgba(13, 148, 136, 0.16);
+}
+
+/* ── 按钮微交互 ── */
+.primary-button {
+  position: relative;
+  overflow: hidden;
+  border: 0;
+  background: var(--gradient-brand);
+  background-size: 200% 200%;
+  box-shadow: 0 8px 22px rgba(13, 148, 136, 0.28);
+  transition:
+    transform var(--duration-fast) var(--ease-spring),
+    box-shadow var(--duration-normal) var(--ease-out),
+    background-position var(--duration-slow) var(--ease-out);
+}
+
+.primary-button:hover {
+  background-position: 100% 0;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(79, 70, 229, 0.28);
+}
+
+.primary-button:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.ghost-button {
+  border-color: var(--teal-border);
+  color: var(--teal-dark);
+  transition:
+    transform var(--duration-fast) var(--ease-spring),
+    background-color var(--duration-fast) var(--ease-out),
+    border-color var(--duration-fast) var(--ease-out);
+}
+
+.ghost-button:hover {
+  border-color: var(--teal);
+  background: var(--teal-soft);
+  transform: translateY(-1px);
+}
+
+.ghost-button:active {
+  transform: scale(0.98);
+}
+
+/* ── 导航切换动效 ── */
+.app-nav button {
+  position: relative;
+  transition:
+    color var(--duration-fast) var(--ease-out),
+    background var(--duration-fast) var(--ease-out),
+    transform var(--duration-fast) var(--ease-spring);
+}
+
+.app-nav button.active {
+  background: var(--gradient-brand);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(13, 148, 136, 0.25);
+}
+
+.app-nav button:active {
+  transform: scale(0.97);
+}
+
+/* ── 表单聚焦态 ── */
+input,
+select,
+textarea {
+  transition:
+    border-color var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.12);
+}
+
+/* ── 进度环平滑过渡 ── */
+.completion-ring {
+  transition: background 0.6s var(--ease-out);
+}
+
+.meter span {
+  transition: width 0.5s var(--ease-out);
+}
+
+/* ── 训练向导步骤 ── */
+.wizard-step {
+  transition:
+    background var(--duration-normal) var(--ease-out),
+    border-color var(--duration-normal) var(--ease-out),
+    transform var(--duration-fast) var(--ease-out);
+}
+
+.wizard-step.active {
+  transform: scale(1.02);
+}
+
+.wizard-step.done b {
+  transition: background var(--duration-normal) var(--ease-out);
+}
+
+/* ── 评分面板入场 ── */
+.score-panel:not(:empty) {
+  animation: fadeSlideIn 0.4s var(--ease-out) both;
+}
+
+/* ── 诊断条状态色 ── */
+.diagnosis.warning {
+  border-color: rgba(217, 119, 6, 0.3);
+  background: linear-gradient(90deg, rgba(255, 251, 235, 0.9), rgba(254, 243, 199, 0.5));
+}
+
+.diagnosis.ready {
+  border-color: rgba(5, 150, 105, 0.3);
+  background: linear-gradient(90deg, rgba(236, 253, 245, 0.9), rgba(209, 250, 229, 0.5));
+}
+
+/* ── Hero / 步骤标题配色统一 ── */
+.hero-copy {
+  background: var(--gradient-hero-bg);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.hero-badge {
+  border-color: rgba(13, 148, 136, 0.2);
+  background: rgba(255, 255, 255, 0.85);
+  transition: transform var(--duration-fast) var(--ease-spring);
+}
+
+.hero-badge:hover {
+  transform: translateY(-1px);
+}
+
+.hero-badge::before {
+  background: var(--gradient-brand);
+}
+
+.start-heading {
+  background: var(--color-surface);
+  border: 1px solid var(--line);
+}
+
+.start-heading .section-kicker {
+  background: var(--gradient-brand);
+  box-shadow: 0 4px 14px var(--teal-glow);
+}
+
+.brand-mark {
+  background: var(--gradient-brand);
+  transition: transform var(--duration-normal) var(--ease-spring);
+}
+
+.brand-block:hover .brand-mark {
+  transform: rotate(-4deg) scale(1.05);
+}
+
+.eyebrow {
+  color: var(--teal-dark);
+}
+
+/* ── 侧边训练轨 ── */
+.learning-rail {
+  background: linear-gradient(180deg, var(--navy) 0%, #0f2744 100%);
+}
+
+.rail-mode {
+  transition:
+    background var(--duration-fast) var(--ease-out),
+    border-color var(--duration-fast) var(--ease-out),
+    transform var(--duration-fast) var(--ease-spring);
+}
+
+.rail-mode:hover {
+  transform: translateX(3px);
+}
+
+.rail-mode.active {
+  background: rgba(20, 184, 166, 0.15);
+}
+
+/* ── 加载动画 ── */
+.coach-loading-mark span {
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── 减少动效偏好 ── */
+@media (prefers-reduced-motion: reduce) {
+  .view-section.view-enter,
+  .workbench-hero,
+  .hero-visual,
+  .hero-copy,
+  .role-start:not(.hidden-section) .role-start-card,
+  .role-start:not(.hidden-section) .start-heading,
+  .role-start:not(.hidden-section) .profile-center-card,
+  .role-start:not(.hidden-section) .start-next,
+  .mode-start:not(.hidden-section) .mode-start-card,
+  .mode-start:not(.hidden-section) .start-heading,
+  .mode-start:not(.hidden-section) .mode-helper,
+  .mode-start:not(.hidden-section) .start-actions,
+  .score-panel:not(:empty) {
+    animation: none;
+  }
+
+  .role-start-card.active,
+  .mode-start-card.active {
+    animation: none;
+  }
+
+  .wizard-step.active {
+    transform: none;
+  }
+}

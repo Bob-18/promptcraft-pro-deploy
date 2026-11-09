@@ -1,0 +1,9 @@
+{
+  "role_id": "backend_developer",
+  "specific_position": "后端开发工程师",
+  "experience_years": 2,
+  "ai_skill_level": "中级",
+  "education_background": "本科",
+  "theory_test_score": 74,
+  "task": "请从正确性、安全性、性能、异常处理、可读性和测试覆盖六个维度审查以下接口代码。"
+}
